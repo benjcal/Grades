@@ -1,0 +1,39 @@
+#flex-container {
+	display: flex;
+	height: 90%;
+}
+
+#main-header {
+	padding: 18px;
+	margin-bottom: 10px;
+	display: flex;
+}
+
+#brand {
+	min-width: 220px;
+}
+
+#nav {
+	width: 100%;
+	text-align: center;
+}
+
+#user-login {
+	min-width: 220px;
+	line-height: 36px;
+}
+
+#main-sidebar {
+	width: 260px;
+	margin-right: 10px;
+}
+
+#main-container {
+	width: 100%;
+	overflow: scroll;
+}
+
+#student-name {
+	width: 240px;
+}
+
