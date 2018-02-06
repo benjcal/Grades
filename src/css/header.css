@@ -1,0 +1,31 @@
+header {
+	padding: 18px;
+    display: flex;
+}
+
+header {
+	background: #23144D;
+	font-size: 1.6em;
+	font-weight: 300;
+	color: #EEE;
+	border-bottom: 3px solid #917CCF;
+}
+
+header .logo {
+	min-width: 220px;
+}
+
+header .nav {
+	width: 100%;
+	text-align: center;
+}
+
+header .user {
+	min-width: 220px;
+	line-height: 36px;
+}
+
+header .user {
+	font-size: 16px;
+	text-align: right;
+}

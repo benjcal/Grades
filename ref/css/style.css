@@ -1,47 +1,6 @@
-body {
-	font-family: 'Open Sans', sans-serif;
-}
 
-a {
-	text-decoration: none;
-}
 
-#main-header {
-	background: #23144D;
-	font-size: 1.6em;
-	font-weight: 300;
-	color: #EEE;
-	border-bottom: 3px solid #917CCF;
-}
 
-#user-login {
-	font-size: 12px;
-	text-align: right;
-}
-
-#main-sidebar {
-	font-weight: 300;
-	font-size: 1.1em;
-}
-
-#main-sidebar > ul > a > li {
-	padding: 15px;
-	border-top: 1px solid #BBB;
-	color: #555;
-	transition: all 0.2s;
-}
-
-#main-sidebar > ul > a >  li:hover {
-	background-color: #CCC;
-}
-
-#main-sidebar > ul > li > a:visited {
-	color: #555;
-}
-
-.fa {
-	padding: 0 16px 0 16px;
-}
 
 td {
 	border-right: 1px solid #DDD;

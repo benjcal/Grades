@@ -1,0 +1,27 @@
+aside {
+    flex: 0 0 260px;
+}
+
+aside {
+	font-weight: 300;
+    font-size: 1.1em;
+    background: #ebebeb;
+}
+
+aside > ul > a > li {
+	padding: 15px;
+	color: #555;
+	transition: all 0.2s;
+}
+
+aside > ul > a >  li:hover {
+	background-color: #CCC;
+}
+
+aside > ul > li > a:visited {
+	color: #555;
+}
+
+aside .fa {
+	padding: 0 16px 0 16px;
+}

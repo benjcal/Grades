@@ -1,0 +1,43 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app main {
+	display: flex;
+	flex: 1 1 auto;
+}
+
+.app main .content {
+	flex: 1 1 auto;
+	overflow: scroll;
+}
+
+#student-name {
+	width: 240px;
+}
+
