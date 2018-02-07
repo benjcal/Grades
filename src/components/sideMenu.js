@@ -1,16 +1,22 @@
 import React, { Component } from 'react'
 import '../css/sideMenu.css'
 
+import FaHome from 'react-icons/lib/fa/home'
+import FaBook from 'react-icons/lib/fa/book'
+import FaCheck from 'react-icons/lib/fa/check-circle-o'
+import FaGroup from 'react-icons/lib/fa/group'
+import FaCogs from 'react-icons/lib/fa/cogs'
+
 class SideMenu extends Component {
     render() {
         return (
             <aside>
                 <ul>
-                    <a href=""><li><i className="fa fa-home"></i>Home</li></a>
-                    <a href=""><li><i className="fa fa-book"></i>Courses</li></a>
-                    <a href=""><li><i className="fa fa-check-circle-o"></i>Assignments</li></a>
-                    <a href=""><li><i className="fa fa-users"></i>Students</li></a>
-                    <a href=""><li><i className="fa fa-cogs"></i>Settings</li></a>
+                    <li onClick={() => {alert('Home')}}><FaHome />Home</li>
+                    <li onClick={() => {alert('Courses')}}><FaBook />Courses</li>
+                    <li onClick={() => {alert('Assignments')}}><FaCheck /> Assignments</li>
+                    <li onClick={() => {alert('Students')}}><FaGroup />Students</li>
+                    <li onClick={() => {alert('Settings')}}><FaCogs />Settings</li>
                 </ul>
             </aside>
         )

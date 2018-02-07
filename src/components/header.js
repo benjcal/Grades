@@ -6,7 +6,7 @@ class Header extends Component {
         return (
             <header>
                 <div className="logo">Grades</div>
-                <div className="nav">nav</div>
+                <div className="nav"></div>
                 <div className="user">Sofia Taylor</div>
             </header>
         )

@@ -1,31 +1,28 @@
 header {
-	padding: 18px;
-    display: flex;
-}
+	display: flex;
+	height: 100px;
 
-header {
 	background: #23144D;
-	font-size: 1.6em;
+	font-size: 16px;
 	font-weight: 300;
 	color: #EEE;
 	border-bottom: 3px solid #917CCF;
+	align-items: center;
 }
 
 header .logo {
-	min-width: 220px;
+	flex: 1 1 auto;
+	padding-left: 20px;
 }
 
 header .nav {
-	width: 100%;
+	flex: 1 1 auto;
 	text-align: center;
 }
 
 header .user {
-	min-width: 220px;
-	line-height: 36px;
-}
-
-header .user {
-	font-size: 16px;
+	flex: 1 1 auto;
+	padding-right: 20px;
 	text-align: right;
+	font-size: 14px;
 }

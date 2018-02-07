@@ -8,20 +8,22 @@ aside {
     background: #ebebeb;
 }
 
-aside > ul > a > li {
+aside > ul > li {
 	padding: 15px;
 	color: #555;
 	transition: all 0.2s;
+	cursor: pointer;
 }
 
-aside > ul > a >  li:hover {
+aside > ul > li:hover {
 	background-color: #CCC;
+	font-weight: 600;
 }
 
 aside > ul > li > a:visited {
 	color: #555;
 }
 
-aside .fa {
+aside svg {
 	padding: 0 16px 0 16px;
 }

@@ -8,7 +8,7 @@ class Grades extends Component {
     render() {
         return (
             <div className="grades">
-                {a.map(n => <h1>{n}</h1>)}
+                {a.map((n, i) => <h1 key={i}>{n}</h1>)}
             </div>
         )
     }
