@@ -1,21 +1,26 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
 import '../css/app.css'
 
-import Courses from './courses'
+
 import SideMenu from './sideMenu'
 import Header from './header'
+import Home from './home'
+import Courses from './courses'
 import Grades from './grades'
 
 class App extends Component {
     render() {
+        let { view } = this.props
+
         return (
             <div className="app">
                 <Header />
                 <main>
                     <SideMenu />
                     <div className="content">
-                        <Courses />
-                        <Grades />
+                        {switchView(view)}
                     </div>
                 </main>
             </div>
@@ -23,4 +28,20 @@ class App extends Component {
     }
 }
 
-export default App
+function switchView(view) {
+    switch (view) {
+        case 'home':
+            return <Home />
+        case 'grades': 
+            return <Grades />
+        default:
+            return <Courses />
+    }
+}
+
+function mapStateToProps(state) {
+    return { view: state.ui.view }
+}
+export default connect(mapStateToProps, null)(App)
+
+

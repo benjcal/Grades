@@ -1,5 +1,6 @@
 aside {
-    flex: 0 0 260px;
+	flex: 0 0 260px;
+	user-select: none;
 }
 
 aside {
