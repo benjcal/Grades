@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../css/courses.css'
+import '../styles/courses.css'
 
 import FaCalculator from 'react-icons/lib/fa/calculator'
 import FaFlask from 'react-icons/lib/fa/flask'

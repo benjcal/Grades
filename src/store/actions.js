@@ -1,6 +1,6 @@
 import store from '.'
 
-export function sample(view) {
+export function setView(view) {
     store.dispatch({
         type: 'SET_VIEW',
         payload: view
