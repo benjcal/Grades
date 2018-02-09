@@ -1,0 +1,45 @@
+.select .name {
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+.select {
+    margin: 20px;
+}
+
+.interface {
+    display: flex;
+    align-content: center;
+    /* height: 26px; */
+}
+
+.selected {
+    display: flex;
+    background: #bbb;
+    flex: 1 1 auto;
+    padding: 10px;
+    user-select: none;
+}
+
+.down {
+    color: #777;
+    background: #ccc;
+    cursor: pointer;
+    line-height: 32px;
+}
+
+.options {
+    position: absolute;
+}
+
+.option {
+    background: #ddd;
+    width: 80px;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.option:hover {
+    background: #eee;
+}

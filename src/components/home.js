@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import AddCourse from './addCourse'
 
 class Home extends Component {
     render() {
         return (
             <div className="home">
-                <h1>Hello</h1>
+                <AddCourse />
             </div>
         )
     }

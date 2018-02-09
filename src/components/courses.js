@@ -7,6 +7,7 @@ import FaDesktop from 'react-icons/lib/fa/desktop'
 import FaPainBrush from 'react-icons/lib/fa/paint-brush'
 import FaGlobe from 'react-icons/lib/fa/globe'
 import FaBook from 'react-icons/lib/fa/book'
+import FaPlus from 'react-icons/lib/fa/plus'
 
 class Courses extends Component {
     render() {
@@ -18,6 +19,7 @@ class Courses extends Component {
                 {course("Arts", "color4", FaPainBrush)}
                 {course("Geology", "color5", FaGlobe)}
                 {course("History", "color6", FaBook)}
+                {course("Add Course", "color7", FaPlus)}
             </div>
         )
     }
