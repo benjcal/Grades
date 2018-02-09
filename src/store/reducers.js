@@ -1,4 +1,4 @@
-export function ui(state = {view: 'home'}, action) {
+export function ui(state = {view: 'courses'}, action) {
     switch (action.type) {
         case 'SET_VIEW':
             return { ...state, view: action.payload }

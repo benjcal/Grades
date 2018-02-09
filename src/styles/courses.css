@@ -1,3 +1,12 @@
+.shadow {
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 100px;
+	z-index: 100;
+}
+
 .courses {
 	display: flex;
 	flex-flow: row wrap;
