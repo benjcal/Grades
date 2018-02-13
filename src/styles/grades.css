@@ -1,5 +1,28 @@
-.grades h1 {
+.grades {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+}
+
+.table {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.row > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background: #eee;
+    border-bottom: 2px solid #ccc;
+    margin: 4px;
+    padding: 0 20px;
+}
+
+.row > .sel {
     background: #456;
-    color: #eee;
-    height: 80px;
 }
