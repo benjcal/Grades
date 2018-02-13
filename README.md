@@ -1,1 +1,1 @@
-Gradebook sideproject developed by Ben Calderon with lots of ❤️
+Gradebook sideproject developed with lots of ❤️ by Ben Calderon
