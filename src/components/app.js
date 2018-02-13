@@ -19,7 +19,7 @@ class App extends Component {
             <div className="app">
                 <Header />
                 <main>
-                    {/* <SideMenu /> */}
+                    <SideMenu />
                     <div className="content">
                         {switchView(view)}
                     </div>
