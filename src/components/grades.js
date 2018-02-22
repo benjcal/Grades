@@ -1,26 +1,41 @@
 import React, { Component } from 'react'
+import { toByIdStudents } from '../lib'
+import studentsData from '../data/students.json'
 import '../styles/grades.css'
+
+let o = toByIdStudents(studentsData)
 
 class Grades extends Component {
     state = {
         sel: 0,
+        
+
     }
 
     componentDidMount() {
-        console.log(this.el)
-        window.addEventListener('keypress', (e) => {
-            console.log(e)
-            this.setState({sel: parseInt(e.key, 10)})
-        })
+        window.testFn = function(e) {
+            if (e.shiftKey && e.code === "Space") {
+                alert('Shift + Space pressed')
+            }
+        }
+        window.addEventListener('keypress', window.testFn)
+
+        Object.keys(toByIdStudents(studentsData))
+
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('keypress', window.testFn)
+        delete window.testFn
     }
 
     render() {
         return (
-            <div className="grades" ref={(e) => {this.el = e}}>
+            <div className="grades">
                 <div className="table">
-                    {nameList(this.state.sel)}
+                    {nameList()}
                 </div>
-                {assigmentList()}
+                
             </div>
         )
     }
@@ -98,24 +113,16 @@ let students = [
     }
 ]
 
-function getStudent(id) {
-    return students.filter(n => n.id === id)[0]
-}
-
 function nameList(i) {
-    let n = assignments[0]
-    n.grades.sort((a,b) => {
-        return a.studentId - b.studentId
-    })
     return (
         <div className="row">
             <span></span>
-            {n.grades.map((g,j) => {
+            {Object.keys(o).map((n,j) => {
                 return (
                     <span
                     key={j}
                     className={i === j ? "sel" : null}
-                    >{getStudent(g.studentId).name}</span>
+                    >{o[n].first_name} {o[n].last_name}</span>
                 )} 
             )}
         </div>

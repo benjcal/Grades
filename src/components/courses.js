@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import AddCourse from './addCourse'
 import '../styles/courses.css'
 
-import FaCalculator from 'react-icons/lib/fa/calculator'
-import FaFlask from 'react-icons/lib/fa/flask'
-import FaDesktop from 'react-icons/lib/fa/desktop'
-import FaPainBrush from 'react-icons/lib/fa/paint-brush'
-import FaGlobe from 'react-icons/lib/fa/globe'
-import FaBook from 'react-icons/lib/fa/book'
-import FaPlus from 'react-icons/lib/fa/plus'
+import Calculator from 'react-icons/lib/fa/calculator'
+import Flask from 'react-icons/lib/fa/flask'
+import Desktop from 'react-icons/lib/fa/desktop'
+import PaintBrush from 'react-icons/lib/fa/paint-brush'
+import Globe from 'react-icons/lib/fa/globe'
+import Book from 'react-icons/lib/fa/book'
+import Plus from 'react-icons/lib/fa/plus'
 
 class Courses extends Component {
     state = {
@@ -26,16 +26,15 @@ class Courses extends Component {
                 <div className="shadow" onClick={(e) => {this.showAdd(e)}}>
                     <AddCourse />
                 </div>}
+                {courses.map((n,i) => {
+                    return (
+                        course(n)
+                    )
+                })}
                 
-                {course("Math", "color1", FaCalculator)}
-                {course("Science", "color2", FaFlask)}
-                {course("Computer", "color3", FaDesktop)}
-                {course("Arts", "color4", FaPainBrush)}
-                {course("Geology", "color5", FaGlobe)}
-                {course("History", "color6", FaBook)}
                 <div className="course color7" onClick={() => {this.setState({showAdd: true})}}>
                     <div>
-                        <div><FaPlus /></div>
+                        <div><Plus /></div>
                         <div>Add Course</div>
                     </div>            
                 </div>
@@ -46,13 +45,71 @@ class Courses extends Component {
 
 export default Courses
 
-function course(name, color, Icon) {
+function course(course) {
     return (
-        <div className={["course", color].join(' ')}>
+        <div key={course.id} className={["course", `color${course.color}`].join(' ')}>
             <div>
-                <div><Icon /></div>
-                <div>{name}</div>
+                <div>{icon(course.icon)}</div>
+                <div>{course.name}</div>
             </div>            
         </div>
     )
+}
+
+let courses = 
+[{
+    id: 1,
+    name: "Macaca fuscata",
+    color: 1,
+    icon: "cal"
+  }, {
+    id: 2,
+    name: "Amblyrhynchus cristatus",
+    color: 1,
+    icon: "book"
+  }, {
+    id: 3,
+    name: "Nannopterum harrisi",
+    color: 7,
+    icon: "flask"
+  }, {
+    id: 4,
+    name: "Plectopterus gambensis",
+    color: 2,
+    icon: "globe"
+  }, {
+    id: 5,
+    name: "Mycteria leucocephala",
+    color: 6,
+    icon: "computer"
+  }, {
+    id: 6,
+    name: "Thalasseus maximus",
+    color: 5,
+    icon: "paint"
+  }, {
+    id: 7,
+    name: "Capreolus capreolus",
+    color: 6,
+    icon: ""
+  }]
+
+function icon(name) {
+    switch (name) {
+        case 'cal':
+            return <Calculator />
+        case 'flask':
+            return <Flask />
+        case 'computer':
+            return <Desktop />
+        case 'paint':
+            return <PaintBrush />
+        case 'globe':
+            return <Globe />
+        case 'book':
+            return <Book />
+    
+        default:
+            return <Plus />
+    }
 }
