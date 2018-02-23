@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import students from '../data/students.json'
-import '../styles/students.css'
-import '../styles/courses.css'
+import 'styles/students.css'
+import 'styles/courses.css'
 
 import Face from 'react-icons/lib/md/face'
 

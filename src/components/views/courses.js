@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import AddCourse from './addCourse'
-import '../styles/courses.css'
+import AddCourse from 'components/addCourse'
+import 'styles/courses.css'
 
 import Calculator from 'react-icons/lib/fa/calculator'
 import Flask from 'react-icons/lib/fa/flask'

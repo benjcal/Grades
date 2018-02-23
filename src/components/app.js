@@ -4,12 +4,12 @@ import { connect } from 'react-redux'
 import 'styles/app.css'
 
 
-import SideMenu from './sideMenu'
-import Header from './header'
-import Home from './home'
-import Courses from './courses'
-import Grades from './grades'
-import Students from './students'
+import SideMenu from 'components/sideMenu'
+import Header from 'components/header'
+import Home from 'components/views/home'
+import Courses from 'components/views/courses'
+import Grades from 'components/views/grades'
+import Students from 'components/views/students'
 
 class App extends Component {
     render() {
