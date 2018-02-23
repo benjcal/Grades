@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { toById } from '../lib'
+import { toById } from '../libs/lib'
 import studentsData from '../data/students.json'
 import '../styles/grades.css'
 

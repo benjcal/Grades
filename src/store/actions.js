@@ -1,5 +1,5 @@
 import store from '.'
-import { toById } from '../lib'
+import { toById } from '../libs/lib'
 
 export function setView(view) {
     store.dispatch({
@@ -24,10 +24,32 @@ export function loadCoursesData(coursesData) {
 
 export function addStudent(student) {
     if (store.getState().students[`student${student.id}`]) {
-        return new Error('error')
+        return new Error('student already exists')
     } else {
         store.dispatch({
             type: 'ADD_STUDENT',
+            payload: student
+        })
+    }
+}
+
+export function deleteStudent(id) {
+    if (!store.getState().students[`student${id}`]) {
+        return new Error('no student found')
+    } else {
+        store.dispatch({
+            type: 'DELETE_STUDENT',
+            payload: id
+        })
+    }
+}
+
+export function updateStudent(student) {
+    if (!store.getState().students[`student${student.id}`]) {
+        return new Error('no student found')
+    } else {
+        store.dispatch({
+            type: 'UPDATE_STUDENT',
             payload: student
         })
     }

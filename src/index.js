@@ -4,21 +4,24 @@ import store from './store'
 import { Provider } from 'react-redux'
 import App from './components/app'
 import registerServiceWorker from './registerServiceWorker'
-import { loadStudentsData, loadCoursesData, addStudent } from './store/actions'
+import { loadStudentsData, loadCoursesData, addStudent, updateStudent, deleteStudent } from './store/actions'
 import studentsData from './data/students.json'
 import coursesData from './data/courses.json'
 
 store.subscribe(() =>
-    console.log(store.getState())
+    console.log("Store Update: ", store.getState())
 )
-
-console.log(store.getState())
 
 loadStudentsData(studentsData)
 
 loadCoursesData(coursesData)
 
-console.log(addStudent({ id: 6, name: 'hhhhhhhh' }))
+updateStudent({ id: 6, name: 'hhhhhhhh' })
+
+addStudent({ id: 60, name: 'hhhhhhhh' })
+
+deleteStudent(6)
+
 
 ReactDOM.render(
     <Provider store={store}>
