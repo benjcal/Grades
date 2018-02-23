@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import '../styles/app.css'
+import 'styles/app.css'
 
 
 import SideMenu from './sideMenu'
