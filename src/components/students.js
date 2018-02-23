@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import students from '../data/students.json'
 import '../styles/students.css'
 import '../styles/courses.css'
 
 import Face from 'react-icons/lib/md/face'
 
-export default class Students extends Component {
+class Students extends Component {
+
     render() {
+        let { students } = this.props
         return (
             <div className="students">
             <table>
@@ -20,16 +23,20 @@ export default class Students extends Component {
                     <th><b>Email</b></th>
                     <th><b>Phone</b></th>
                 </tr>
-            {students.map(n => <tr key={n.id}>
-                <td className={["avatar", `color-fg${Math.ceil(Math.random() * 6)}`].join(' ')}><Face /></td>
-                <td>{n.id}</td>
-                <td>{n.first_name}</td>
-                <td>{n.last_name}</td>
-                <td>{n.grade}</td>
-                <td>{n.email}</td>
-                <td>{n.phone}</td>
-            </tr>
-            
+            {Object.keys(students).map(n => {
+                let m = students[n]
+                return (
+                    <tr key={m.id}>
+                        <td className={["avatar", `color-fg${Math.ceil(Math.random() * 6)}`].join(' ')}><Face /></td>
+                        <td>{m.id}</td>
+                        <td>{m.first_name}</td>
+                        <td>{m.last_name}</td>
+                        <td>{m.grade}</td>
+                        <td>{m.email}</td>
+                        <td>{m.phone}</td>
+                    </tr>
+                )
+            }          
         )}
         </tbody>
             </table>
@@ -37,3 +44,8 @@ export default class Students extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return { students: state.students }
+}
+export default connect(mapStateToProps, null)(Students)

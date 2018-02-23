@@ -7,7 +7,7 @@ import FaCheck from 'react-icons/lib/fa/check-circle-o'
 import FaGroup from 'react-icons/lib/fa/group'
 import FaCogs from 'react-icons/lib/fa/cogs'
 
-import { setView } from '../store/actions'
+import { setView } from '../store/actions/ui'
 
 class SideMenu extends Component {
     render() {

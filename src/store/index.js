@@ -4,7 +4,8 @@ import { ui, students, courses } from './reducers'
 let store = createStore(combineReducers({
     ui,
     students,
-    courses
+    courses,
+    
 }))
 
 export default store

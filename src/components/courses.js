@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import AddCourse from './addCourse'
 import '../styles/courses.css'
 
@@ -20,15 +21,16 @@ class Courses extends Component {
         }
     }
     render() {
+        let { courses } = this.props
         return (
             <div className="courses">
             {this.state.showAdd &&
                 <div className="shadow" onClick={(e) => {this.showAdd(e)}}>
                     <AddCourse />
                 </div>}
-                {courses.map((n,i) => {
+                {Object.keys(courses).map((n) => {
                     return (
-                        course(n)
+                        course(courses[n])
                     )
                 })}
                 
@@ -42,8 +44,10 @@ class Courses extends Component {
         )
     }
 }
-
-export default Courses
+function mapStateToProps(state) {
+    return { courses: state.courses }
+}
+export default connect(mapStateToProps, null)(Courses)
 
 function course(course) {
     return (
@@ -55,44 +59,6 @@ function course(course) {
         </div>
     )
 }
-
-let courses = 
-[{
-    id: 1,
-    name: "Macaca fuscata",
-    color: 1,
-    icon: "cal"
-  }, {
-    id: 2,
-    name: "Amblyrhynchus cristatus",
-    color: 1,
-    icon: "book"
-  }, {
-    id: 3,
-    name: "Nannopterum harrisi",
-    color: 7,
-    icon: "flask"
-  }, {
-    id: 4,
-    name: "Plectopterus gambensis",
-    color: 2,
-    icon: "globe"
-  }, {
-    id: 5,
-    name: "Mycteria leucocephala",
-    color: 6,
-    icon: "computer"
-  }, {
-    id: 6,
-    name: "Thalasseus maximus",
-    color: 5,
-    icon: "paint"
-  }, {
-    id: 7,
-    name: "Capreolus capreolus",
-    color: 6,
-    icon: ""
-  }]
 
 function icon(name) {
     switch (name) {
