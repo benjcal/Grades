@@ -1,8 +1,10 @@
 import { createStore, combineReducers } from 'redux'
-import { ui } from './reducers'
+import { ui, students, courses } from './reducers'
 
 let store = createStore(combineReducers({
-    ui
+    ui,
+    students,
+    courses
 }))
 
 export default store

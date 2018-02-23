@@ -1,9 +1,9 @@
-export function toByIdStudents(students) {
+export function toById(type, object) {
     let byId = {}
 
-    students.map(n => 
-        byId[`student${n.id}`] = n
+    object.map(n => 
+        byId[`${type}${n.id}`] = n
     )
-    
+
     return byId
 }

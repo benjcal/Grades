@@ -1,0 +1,51 @@
+[{
+  "id": 1,
+  "name": "Sula nebouxii",
+  "color": 5,
+  "icon": "pede"
+}, {
+  "id": 2,
+  "name": "Larus dominicanus",
+  "color": 3,
+  "icon": "odio"
+}, {
+  "id": 3,
+  "name": "Connochaetus taurinus",
+  "color": 3,
+  "icon": "et"
+}, {
+  "id": 4,
+  "name": "Dusicyon thous",
+  "color": 1,
+  "icon": "ante"
+}, {
+  "id": 5,
+  "name": "Phalaropus fulicarius",
+  "color": 5,
+  "icon": "eu"
+}, {
+  "id": 6,
+  "name": "Rhea americana",
+  "color": 4,
+  "icon": "hac"
+}, {
+  "id": 7,
+  "name": "Haematopus ater",
+  "color": 3,
+  "icon": "justo"
+}, {
+  "id": 8,
+  "name": "Antilope cervicapra",
+  "color": 7,
+  "icon": "vestibulum"
+}, {
+  "id": 9,
+  "name": "Vulpes chama",
+  "color": 1,
+  "icon": "viverra"
+}, {
+  "id": 10,
+  "name": "Ovis ammon",
+  "color": 5,
+  "icon": "amet"
+}]
