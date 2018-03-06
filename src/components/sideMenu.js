@@ -16,7 +16,10 @@ class SideMenu extends Component {
                 <ul>
                     <li onClick={() => {setView('home')}}><FaHome />Home</li>
                     <li onClick={() => {setView('courses')}}><FaBook />Courses</li>
-                    <li onClick={() => {setView('grades')}}><FaCheck /> Assignments</li>
+                    <ul>
+                        <li onClick={() => {setView('grades')}}><FaCheck /> Assignments</li>
+                    </ul>
+                    
                     <li onClick={() => {setView('students')}}><FaGroup />Students</li>
                     <li onClick={() => {alert('Settings')}}><FaCogs />Settings</li>
                 </ul>

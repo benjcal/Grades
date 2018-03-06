@@ -1,6 +1,6 @@
 header {
 	display: flex;
-	flex: 0 0 60px;
+	height: 60px;
 
 	background: #23144D;
 	font-size: 16px;
@@ -25,4 +25,22 @@ header .user {
 	padding-right: 20px;
 	text-align: right;
 	font-size: 14px;
+}
+
+header input[type="text"] {
+	background: #23144D;
+	border: none;
+	font-family: inherit;
+	font-size: 24px;
+	font-weight: 700;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+	color: #FFF;
+}
+
+header input[type="text"]::placeholder {
+	color: rgba(255, 255, 255, 0.2);
+}
+
+header input[type="text"]:focus {
+	outline: none;
 }

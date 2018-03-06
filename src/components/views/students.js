@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import { observer, inject } from 'mobx-react'
 import 'styles/students.css'
 import 'styles/courses.css'
 
@@ -8,7 +8,6 @@ import Face from 'react-icons/lib/md/face'
 class Students extends Component {
 
     render() {
-        let { students } = this.props
         return (
             <div className="students">
             <table>
@@ -22,7 +21,7 @@ class Students extends Component {
                     <th><b>Email</b></th>
                     <th><b>Phone</b></th>
                 </tr>
-            {Object.keys(students).map(n => {
+            {/* {Object.keys(students).map(n => {
                 let m = students[n]
                 return (
                     <tr key={m.id}>
@@ -36,7 +35,7 @@ class Students extends Component {
                     </tr>
                 )
             }          
-        )}
+        )} */}
         </tbody>
             </table>
             </div>
@@ -44,7 +43,4 @@ class Students extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return { students: state.students }
-}
-export default connect(mapStateToProps, null)(Students)
+export default inject('store')(observer(Students))

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { observer, inject } from 'mobx-react'
 import Select from './select'
 import '../styles/addCourse.css'
 
@@ -12,7 +13,7 @@ import FaBook from 'react-icons/lib/fa/book'
 let icons = [FaCalculator(), FaFlask(), FaDesktop(), FaPainBrush(), FaGlobe(), FaGlobe(), FaBook()]
 let grades = ["K","1st","2nd","3rd","4th","5th","6th","7th","8th","9th","11th","12th"]
 
-export default class AddCourse extends Component {
+class AddCourse extends Component {
     fn(e) {
         console.log(e)
     }
@@ -37,3 +38,5 @@ export default class AddCourse extends Component {
         )
     }
 }
+
+export default inject('store')(observer(AddCourse))

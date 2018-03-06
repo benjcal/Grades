@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,600');
 
-html, body, #root {
+html, body, #root, .app {
     height: 100%;
     margin: 0;
     overflow: hidden;
@@ -20,23 +20,13 @@ ul {
     margin: 0;
 }
 
-.app {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
 
 .app main {
-	display: flex;
-	flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    height: calc(100% - 60px);
 }
 
 .app main .content {
-	flex: 1 1 auto;
 	overflow: scroll;
 }
-
-#student-name {
-	width: 240px;
-}
-

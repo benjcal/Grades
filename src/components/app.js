@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 
 import 'styles/app.css'
-
 
 import SideMenu from 'components/sideMenu'
 import Header from 'components/header'
@@ -13,7 +11,7 @@ import Students from 'components/views/students'
 
 class App extends Component {
     render() {
-        let { view } = this.props
+        let view = 'students'
 
         return (
             <div className="app">
@@ -42,9 +40,6 @@ function switchView(view) {
     }
 }
 
-function mapStateToProps(state) {
-    return { view: state.ui.view }
-}
-export default connect(mapStateToProps, null)(App)
+export default App
 
 

@@ -1,4 +1,4 @@
-import { types, getParent, destroy } from 'mobx-state-tree'
+import { types, getParent } from 'mobx-state-tree'
 
 const Student = types.model({
     id: types.identifier(types.string),
