@@ -1,401 +1,401 @@
 [{
-  "id": 1,
-  "first_name": "Jeniece",
-  "last_name": "Carmody",
+  "id": "1",
+  "firstName": "Jeniece",
+  "lastName": "Carmody",
   "email": "jcarmody0@aboutads.info",
   "phone": "898-848-2769",
-  "grade": 6,
-  "color": "#92bc5e"
+  "grade": "6",
+  "color": 2
 }, {
-  "id": 2,
-  "first_name": "Seward",
-  "last_name": "Maddie",
+  "id": "2",
+  "firstName": "Seward",
+  "lastName": "Maddie",
   "email": "smaddie1@hugedomains.com",
   "phone": "596-305-6769",
-  "grade": 5,
-  "color": "#728cf8"
+  "grade": "5",
+  "color": 2
 }, {
-  "id": 3,
-  "first_name": "Marya",
-  "last_name": "Gargett",
+  "id": "3",
+  "firstName": "Marya",
+  "lastName": "Gargett",
   "email": "mgargett2@canalblog.com",
   "phone": "603-919-9544",
-  "grade": 1,
-  "color": "#0efae1"
+  "grade": "1",
+  "color": 2
 }, {
-  "id": 4,
-  "first_name": "Rikki",
-  "last_name": "LLelweln",
+  "id": "4",
+  "firstName": "Rikki",
+  "lastName": "LLelweln",
   "email": "rllelweln3@amazonaws.com",
   "phone": "637-457-4261",
-  "grade": 8,
-  "color": "#573502"
+  "grade": "8",
+  "color": 2
 }, {
-  "id": 5,
-  "first_name": "Saraann",
-  "last_name": "Poston",
+  "id": "5",
+  "firstName": "Saraann",
+  "lastName": "Poston",
   "email": "sposton4@dagondesign.com",
   "phone": "513-369-3494",
-  "grade": 11,
-  "color": "#1dcd53"
+  "grade": "11",
+  "color": 2
 }, {
-  "id": 6,
-  "first_name": "Gage",
-  "last_name": "Jagiela",
+  "id": "6",
+  "firstName": "Gage",
+  "lastName": "Jagiela",
   "email": "gjagiela5@census.gov",
   "phone": "352-635-9878",
-  "grade": 9,
-  "color": "#4d75c4"
+  "grade": "9",
+  "color": 2
 }, {
-  "id": 7,
-  "first_name": "Lyndell",
-  "last_name": "Organer",
+  "id": "7",
+  "firstName": "Lyndell",
+  "lastName": "Organer",
   "email": "lorganer6@salon.com",
   "phone": "118-977-7327",
-  "grade": 2,
-  "color": "#47aa68"
+  "grade": "2",
+  "color": 2
 }, {
-  "id": 8,
-  "first_name": "Hesther",
-  "last_name": "Prinnett",
+  "id": "8",
+  "firstName": "Hesther",
+  "lastName": "Prinnett",
   "email": "hprinnett7@amazon.co.uk",
   "phone": "796-312-2667",
-  "grade": 10,
-  "color": "#fb7ead"
+  "grade": "10",
+  "color": 2
 }, {
-  "id": 9,
-  "first_name": "Natassia",
-  "last_name": "Brown",
+  "id": "9",
+  "firstName": "Natassia",
+  "lastName": "Brown",
   "email": "nbrown8@google.ru",
   "phone": "245-319-1865",
-  "grade": 8,
-  "color": "#52f7b2"
+  "grade": "8",
+  "color": 2
 }, {
-  "id": 10,
-  "first_name": "Brendon",
-  "last_name": "Bayns",
+  "id": "10",
+  "firstName": "Brendon",
+  "lastName": "Bayns",
   "email": "bbayns9@examiner.com",
   "phone": "469-989-8333",
-  "grade": 9,
-  "color": "#9fac28"
+  "grade": "9",
+  "color": 2
 }, {
-  "id": 11,
-  "first_name": "Cacilie",
-  "last_name": "Mounce",
+  "id": "11",
+  "firstName": "Cacilie",
+  "lastName": "Mounce",
   "email": "cmouncea@arstechnica.com",
   "phone": "969-598-5023",
-  "grade": 7,
-  "color": "#2f19bc"
+  "grade": "7",
+  "color": 2
 }, {
-  "id": 12,
-  "first_name": "Milka",
-  "last_name": "Copeland",
+  "id": "12",
+  "firstName": "Milka",
+  "lastName": "Copeland",
   "email": "mcopelandb@toplist.cz",
   "phone": "145-841-0605",
-  "grade": 2,
-  "color": "#fe6c32"
+  "grade": "2",
+  "color": 2
 }, {
-  "id": 13,
-  "first_name": "Magdalen",
-  "last_name": "Seydlitz",
+  "id": "13",
+  "firstName": "Magdalen",
+  "lastName": "Seydlitz",
   "email": "mseydlitzc@squidoo.com",
   "phone": "974-628-6313",
-  "grade": 5,
-  "color": "#e48cfb"
+  "grade": "5",
+  "color": 2
 }, {
-  "id": 14,
-  "first_name": "Mirabel",
-  "last_name": "Murty",
+  "id": "14",
+  "firstName": "Mirabel",
+  "lastName": "Murty",
   "email": "mmurtyd@amazon.com",
   "phone": "550-353-5761",
-  "grade": 1,
-  "color": "#869537"
+  "grade": "1",
+  "color": 2
 }, {
-  "id": 15,
-  "first_name": "Darb",
-  "last_name": "Parratt",
+  "id": "15",
+  "firstName": "Darb",
+  "lastName": "Parratt",
   "email": "dparratte@ning.com",
   "phone": "405-977-7527",
-  "grade": 6,
-  "color": "#d1ec1a"
+  "grade": "6",
+  "color": 2
 }, {
-  "id": 16,
-  "first_name": "Sven",
-  "last_name": "Lapish",
+  "id": "16",
+  "firstName": "Sven",
+  "lastName": "Lapish",
   "email": "slapishf@cbc.ca",
   "phone": "332-814-1633",
-  "grade": 2,
-  "color": "#aa85d6"
+  "grade": "2",
+  "color": 2
 }, {
-  "id": 17,
-  "first_name": "Morley",
-  "last_name": "Goodband",
+  "id": "17",
+  "firstName": "Morley",
+  "lastName": "Goodband",
   "email": "mgoodbandg@cargocollective.com",
   "phone": "537-613-8528",
-  "grade": 4,
-  "color": "#492c5d"
+  "grade": "4",
+  "color": 2
 }, {
-  "id": 18,
-  "first_name": "Keir",
-  "last_name": "Philipp",
+  "id": "18",
+  "firstName": "Keir",
+  "lastName": "Philipp",
   "email": "kphilipph@chron.com",
   "phone": "370-149-1771",
-  "grade": 12,
-  "color": "#c158f6"
+  "grade": "12",
+  "color": 2
 }, {
-  "id": 19,
-  "first_name": "Winfred",
-  "last_name": "Hylden",
+  "id": "19",
+  "firstName": "Winfred",
+  "lastName": "Hylden",
   "email": "whyldeni@scientificamerican.com",
   "phone": "768-984-7265",
-  "grade": 5,
-  "color": "#122232"
+  "grade": "5",
+  "color": 2
 }, {
-  "id": 20,
-  "first_name": "Beckie",
-  "last_name": "Arbuckel",
+  "id": "20",
+  "firstName": "Beckie",
+  "lastName": "Arbuckel",
   "email": "barbuckelj@bizjournals.com",
   "phone": "466-700-0103",
-  "grade": 8,
-  "color": "#afec9f"
+  "grade": "8",
+  "color": 2
 }, {
-  "id": 21,
-  "first_name": "Iolande",
-  "last_name": "Brumfitt",
+  "id": "21",
+  "firstName": "Iolande",
+  "lastName": "Brumfitt",
   "email": "ibrumfittk@cbc.ca",
   "phone": "347-821-9349",
-  "grade": 6,
-  "color": "#1701b9"
+  "grade": "6",
+  "color": 2
 }, {
-  "id": 22,
-  "first_name": "Alaster",
-  "last_name": "Whittick",
+  "id": "22",
+  "firstName": "Alaster",
+  "lastName": "Whittick",
   "email": "awhittickl@europa.eu",
   "phone": "584-108-7112",
-  "grade": 10,
-  "color": "#3cf816"
+  "grade": "10",
+  "color": 2
 }, {
-  "id": 23,
-  "first_name": "Katerine",
-  "last_name": "Frede",
+  "id": "23",
+  "firstName": "Katerine",
+  "lastName": "Frede",
   "email": "kfredem@smugmug.com",
   "phone": "845-332-4187",
-  "grade": 12,
-  "color": "#813023"
+  "grade": "12",
+  "color": 2
 }, {
-  "id": 24,
-  "first_name": "Dix",
-  "last_name": "Alti",
+  "id": "24",
+  "firstName": "Dix",
+  "lastName": "Alti",
   "email": "daltin@spotify.com",
   "phone": "783-396-8066",
-  "grade": 8,
-  "color": "#1b63c3"
+  "grade": "8",
+  "color": 2
 }, {
-  "id": 25,
-  "first_name": "Filippa",
-  "last_name": "McGuiney",
+  "id": "25",
+  "firstName": "Filippa",
+  "lastName": "McGuiney",
   "email": "fmcguineyo@wix.com",
   "phone": "294-573-7342",
-  "grade": 1,
-  "color": "#aee40f"
+  "grade": "1",
+  "color": 2
 }, {
-  "id": 26,
-  "first_name": "Andrus",
-  "last_name": "McRory",
+  "id": "26",
+  "firstName": "Andrus",
+  "lastName": "McRory",
   "email": "amcroryp@meetup.com",
   "phone": "145-265-2659",
-  "grade": 10,
-  "color": "#6240f7"
+  "grade": "10",
+  "color": 2
 }, {
-  "id": 27,
-  "first_name": "Ethelyn",
-  "last_name": "Greenan",
+  "id": "27",
+  "firstName": "Ethelyn",
+  "lastName": "Greenan",
   "email": "egreenanq@google.co.uk",
   "phone": "570-436-7545",
-  "grade": 7,
-  "color": "#8ff686"
+  "grade": "7",
+  "color": 2
 }, {
-  "id": 28,
-  "first_name": "Errick",
-  "last_name": "Vanes",
+  "id": "28",
+  "firstName": "Errick",
+  "lastName": "Vanes",
   "email": "evanesr@infoseek.co.jp",
   "phone": "581-343-6877",
-  "grade": 1,
-  "color": "#dc52b2"
+  "grade": "1",
+  "color": 2
 }, {
-  "id": 29,
-  "first_name": "Rainer",
-  "last_name": "Antoniak",
+  "id": "29",
+  "firstName": "Rainer",
+  "lastName": "Antoniak",
   "email": "rantoniaks@twitter.com",
   "phone": "303-471-6128",
-  "grade": 3,
-  "color": "#9cbfd3"
+  "grade": "3",
+  "color": 2
 }, {
-  "id": 30,
-  "first_name": "Frederic",
-  "last_name": "Gerrie",
+  "id": "30",
+  "firstName": "Frederic",
+  "lastName": "Gerrie",
   "email": "fgerriet@usa.gov",
   "phone": "727-268-6020",
-  "grade": 3,
-  "color": "#8ede9d"
+  "grade": "3",
+  "color": 2
 }, {
-  "id": 31,
-  "first_name": "Andi",
-  "last_name": "Krout",
+  "id": "31",
+  "firstName": "Andi",
+  "lastName": "Krout",
   "email": "akroutu@yelp.com",
   "phone": "798-242-9631",
-  "grade": 11,
-  "color": "#f187fa"
+  "grade": "11",
+  "color": 2
 }, {
-  "id": 32,
-  "first_name": "Letti",
-  "last_name": "Pilley",
+  "id": "32",
+  "firstName": "Letti",
+  "lastName": "Pilley",
   "email": "lpilleyv@fotki.com",
   "phone": "405-953-2675",
-  "grade": 2,
-  "color": "#073bb2"
+  "grade": "2",
+  "color": 2
 }, {
-  "id": 33,
-  "first_name": "Teddie",
-  "last_name": "Gaenor",
+  "id": "33",
+  "firstName": "Teddie",
+  "lastName": "Gaenor",
   "email": "tgaenorw@state.gov",
   "phone": "906-605-8746",
-  "grade": 1,
-  "color": "#27d84b"
+  "grade": "1",
+  "color": 2
 }, {
-  "id": 34,
-  "first_name": "Jaquenetta",
-  "last_name": "Lilford",
+  "id": "34",
+  "firstName": "Jaquenetta",
+  "lastName": "Lilford",
   "email": "jlilfordx@phoca.cz",
   "phone": "246-269-0110",
-  "grade": 1,
-  "color": "#9d6187"
+  "grade": "1",
+  "color": 2
 }, {
-  "id": 35,
-  "first_name": "Fayette",
-  "last_name": "Ouver",
+  "id": "35",
+  "firstName": "Fayette",
+  "lastName": "Ouver",
   "email": "fouvery@hibu.com",
   "phone": "119-704-3760",
-  "grade": 1,
-  "color": "#f2ba42"
+  "grade": "1",
+  "color": 2
 }, {
-  "id": 36,
-  "first_name": "Grace",
-  "last_name": "Sarver",
+  "id": "36",
+  "firstName": "Grace",
+  "lastName": "Sarver",
   "email": "gsarverz@statcounter.com",
   "phone": "744-294-1549",
-  "grade": 4,
-  "color": "#283ebf"
+  "grade": "4",
+  "color": 2
 }, {
-  "id": 37,
-  "first_name": "Gaston",
-  "last_name": "Deeney",
+  "id": "37",
+  "firstName": "Gaston",
+  "lastName": "Deeney",
   "email": "gdeeney10@reverbnation.com",
   "phone": "375-874-1484",
-  "grade": 9,
-  "color": "#82f4e6"
+  "grade": "9",
+  "color": 2
 }, {
-  "id": 38,
-  "first_name": "Denys",
-  "last_name": "Wimbridge",
+  "id": "38",
+  "firstName": "Denys",
+  "lastName": "Wimbridge",
   "email": "dwimbridge11@furl.net",
   "phone": "138-837-1633",
-  "grade": 10,
-  "color": "#88ad95"
+  "grade": "10",
+  "color": 2
 }, {
-  "id": 39,
-  "first_name": "Aluin",
-  "last_name": "Beinisch",
+  "id": "39",
+  "firstName": "Aluin",
+  "lastName": "Beinisch",
   "email": "abeinisch12@state.tx.us",
   "phone": "448-531-0723",
-  "grade": 5,
-  "color": "#893287"
+  "grade": "5",
+  "color": 2
 }, {
-  "id": 40,
-  "first_name": "Inessa",
-  "last_name": "Dearlove",
+  "id": "40",
+  "firstName": "Inessa",
+  "lastName": "Dearlove",
   "email": "idearlove13@engadget.com",
   "phone": "421-574-8371",
-  "grade": 2,
-  "color": "#2a745c"
+  "grade": "2",
+  "color": 2
 }, {
-  "id": 41,
-  "first_name": "Annelise",
-  "last_name": "Chomicki",
+  "id": "41",
+  "firstName": "Annelise",
+  "lastName": "Chomicki",
   "email": "achomicki14@t.co",
   "phone": "894-734-1335",
-  "grade": 3,
-  "color": "#df12cc"
+  "grade": "3",
+  "color": 2
 }, {
-  "id": 42,
-  "first_name": "Henryetta",
-  "last_name": "Bowman",
+  "id": "42",
+  "firstName": "Henryetta",
+  "lastName": "Bowman",
   "email": "hbowman15@a8.net",
   "phone": "796-508-1028",
-  "grade": 8,
-  "color": "#3396f6"
+  "grade": "8",
+  "color": 2
 }, {
-  "id": 43,
-  "first_name": "Randie",
-  "last_name": "Ilyinski",
+  "id": "43",
+  "firstName": "Randie",
+  "lastName": "Ilyinski",
   "email": "rilyinski16@123-reg.co.uk",
   "phone": "874-951-0699",
-  "grade": 5,
-  "color": "#3e16e9"
+  "grade": "5",
+  "color": 2
 }, {
-  "id": 44,
-  "first_name": "Tara",
-  "last_name": "Kivelhan",
+  "id": "44",
+  "firstName": "Tara",
+  "lastName": "Kivelhan",
   "email": "tkivelhan17@state.gov",
   "phone": "296-745-3419",
-  "grade": 6,
-  "color": "#327cac"
+  "grade": "6",
+  "color": 2
 }, {
-  "id": 45,
-  "first_name": "Derril",
-  "last_name": "Halbert",
+  "id": "45",
+  "firstName": "Derril",
+  "lastName": "Halbert",
   "email": "dhalbert18@hao123.com",
   "phone": "824-869-4455",
-  "grade": 9,
-  "color": "#5769ce"
+  "grade": "9",
+  "color": 2
 }, {
-  "id": 46,
-  "first_name": "Etheline",
-  "last_name": "Bart",
+  "id": "46",
+  "firstName": "Etheline",
+  "lastName": "Bart",
   "email": "ebart19@github.com",
   "phone": "417-101-5364",
-  "grade": 11,
-  "color": "#149212"
+  "grade": "11",
+  "color": 2
 }, {
-  "id": 47,
-  "first_name": "Sollie",
-  "last_name": "Bygreaves",
+  "id": "47",
+  "firstName": "Sollie",
+  "lastName": "Bygreaves",
   "email": "sbygreaves1a@live.com",
   "phone": "467-841-6622",
-  "grade": 4,
-  "color": "#bff2cc"
+  "grade": "4",
+  "color": 2
 }, {
-  "id": 48,
-  "first_name": "Ancell",
-  "last_name": "Trippitt",
+  "id": "48",
+  "firstName": "Ancell",
+  "lastName": "Trippitt",
   "email": "atrippitt1b@yale.edu",
   "phone": "974-342-7183",
-  "grade": 7,
-  "color": "#0bcd99"
+  "grade": "7",
+  "color": 2
 }, {
-  "id": 49,
-  "first_name": "Murdoch",
-  "last_name": "Collman",
+  "id": "49",
+  "firstName": "Murdoch",
+  "lastName": "Collman",
   "email": "mcollman1c@ucla.edu",
   "phone": "689-922-7690",
-  "grade": 11,
-  "color": "#176eaf"
+  "grade": "11",
+  "color": 2
 }, {
-  "id": 50,
-  "first_name": "Aigneis",
-  "last_name": "Arkow",
+  "id": "50",
+  "firstName": "Aigneis",
+  "lastName": "Arkow",
   "email": "aarkow1d@epa.gov",
   "phone": "389-109-9160",
-  "grade": 1,
-  "color": "#88ca1a"
+  "grade": "1",
+  "color": 2
 }]

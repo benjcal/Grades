@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import App from './components/app'
 import registerServiceWorker from './registerServiceWorker'
 import { loadStudentsData, addStudent, updateStudent, deleteStudent } from './store/actions/students'
-import { loadCoursesData, addCourse, updateCourse, deleteCourse } from './store/actions/courses'
+import { loadCoursesData } from './store/actions/courses'
 import studentsData from './data/students.json'
 import coursesData from './data/courses.json'
 
