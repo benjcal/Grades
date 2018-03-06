@@ -19,15 +19,15 @@ class Students extends Component {
                     <th><b>Email</b></th>
                     <th><b>Phone</b></th>
                 </tr>
-            {store.students.entries().map(n => {
+            {store.students.values().map(n => {
                 return (
-                    <tr key={n[1].id}>
-                        <td>{n[1].id}</td>
-                        <td>{n[1].firstName}</td>
-                        <td>{n[1].lastName}</td>
-                        <td>{n[1].grade}</td>
-                        <td>{n[1].email}</td>
-                        <td>{n[1].phone}</td>
+                    <tr key={n.id}>
+                        <td>{n.id}</td>
+                        <td>{n.firstName}</td>
+                        <td>{n.lastName}</td>
+                        <td>{n.grade}</td>
+                        <td>{n.email}</td>
+                        <td>{n.phone}</td>
                     </tr>
                 )
             }          
