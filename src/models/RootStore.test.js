@@ -1,8 +1,8 @@
 import RootStore from './RootStore'
 import Student from './Student'
 import Course from './Course'
-import studentsData from '../data/students'
-import coursesData from '../data/courses'
+import studentsData from 'data/students'
+import coursesData from 'data/courses'
 
 let store = RootStore.create()
 

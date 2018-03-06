@@ -9,13 +9,13 @@ const RootStore = types.model({
     activities: types.optional(types.map(Activity), {}),
 }).actions(self => ({
     addStudent(student) {
-        self.students.set(student.id, student)
+        self.students.set(student.id, Student.create(student))
     },
     removeStudent(student) {
         destroy(student)
     },
     addCourse(course) {
-        self.courses.set(course.id, course)
+        self.courses.set(course.id, Course.create(course))
     },
     removeCourse(course) {
         destroy(course)

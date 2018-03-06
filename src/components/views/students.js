@@ -3,17 +3,15 @@ import { observer, inject } from 'mobx-react'
 import 'styles/students.css'
 import 'styles/courses.css'
 
-import Face from 'react-icons/lib/md/face'
-
 class Students extends Component {
 
     render() {
+        let { store } = this.props
         return (
             <div className="students">
             <table>
                 <tbody>
                 <tr>
-                    <th className="avatar-header" style={{background: "#FFF"}}></th>
                     <th className="id-header"><b>ID</b></th>
                     <th><b>First name</b></th>
                     <th><b>Last name</b></th>
@@ -21,21 +19,19 @@ class Students extends Component {
                     <th><b>Email</b></th>
                     <th><b>Phone</b></th>
                 </tr>
-            {/* {Object.keys(students).map(n => {
-                let m = students[n]
+            {store.students.entries().map(n => {
                 return (
-                    <tr key={m.id}>
-                        <td className={["avatar", `color-fg${Math.ceil(Math.random() * 6)}`].join(' ')}><Face /></td>
-                        <td>{m.id}</td>
-                        <td>{m.first_name}</td>
-                        <td>{m.last_name}</td>
-                        <td>{m.grade}</td>
-                        <td>{m.email}</td>
-                        <td>{m.phone}</td>
+                    <tr key={n[1].id}>
+                        <td>{n[1].id}</td>
+                        <td>{n[1].firstName}</td>
+                        <td>{n[1].lastName}</td>
+                        <td>{n[1].grade}</td>
+                        <td>{n[1].email}</td>
+                        <td>{n[1].phone}</td>
                     </tr>
                 )
             }          
-        )} */}
+        )}
         </tbody>
             </table>
             </div>
