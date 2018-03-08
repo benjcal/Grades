@@ -1,0 +1,5 @@
+.modal-root {
+	filter: blur(3px);
+    overflow: hidden;
+    
+}
