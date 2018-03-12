@@ -1,8 +1,10 @@
 header {
+
+	--bg-color: #3d144d;
 	display: flex;
 	height: 60px;
 
-	background: #23144D;
+	background: var(--bg-color);
 	font-size: 16px;
 	font-weight: 300;
 	color: #EEE;
@@ -28,7 +30,7 @@ header .user {
 }
 
 header input[type="text"] {
-	background: #23144D;
+	background: var(--bg-color);
 	border: none;
 	font-family: inherit;
 	font-size: 24px;

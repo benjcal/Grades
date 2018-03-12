@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
+import Modal from 'components/modal'
 import 'styles/students.css'
 import 'styles/courses.css'
 
@@ -18,20 +19,42 @@ class Students extends Component {
         this.setState({
             addStudentVisible: !this.state.addStudentVisible
         })
+        super()
+        this.state = {
+            test: 0,
+            modal: false
+        }
+
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick(e) {
+        this.setState({modal: !this.state.modal})
     }
 
     render() {
         let { store } = this.props
         return (
             <div className="students">
+<<<<<<< HEAD
                 <div className="sub-header">
                     <button onClick={this.handleAddCourseButton}>Add Course</button>
                     {this.state.addStudentVisible && <button>Add Course</button>}
                 </div>
+=======
+            {this.state.modal && <Modal>
+            <div className="modal-bg">
+                    <div className="modal">
+                        <h1 onClick={this.handleClick}>{this.state.test}</h1>
+                    </div>
+                </div>
+            </Modal>}
+                
+>>>>>>> 223bc1772f7454fb2fd0259e3ddc2e9d0123f5b5
             <table>
                 <tbody>
                 <tr>
-                    <th className="id-header"><b>ID</b></th>
+                    <th className="id-header" onClick={this.handleClick}><b>ID</b></th>
                     <th><b>First name</b></th>
                     <th><b>Last name</b></th>
                     <th className="grades-header"><b>Grade</b></th>
