@@ -1,3 +1,8 @@
+.students .sub-header {
+	color: #FFF;
+	background: indigo;
+}
+
 td {
 	border-right: 1px solid #DDD;
 	padding: 14px;

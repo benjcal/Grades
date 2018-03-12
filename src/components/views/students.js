@@ -4,11 +4,30 @@ import 'styles/students.css'
 import 'styles/courses.css'
 
 class Students extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            addStudentVisible: false
+        }
+
+        this.handleAddCourseButton = this.handleAddCourseButton.bind(this)
+    }
+
+    handleAddCourseButton() {
+        this.setState({
+            addStudentVisible: !this.state.addStudentVisible
+        })
+    }
 
     render() {
         let { store } = this.props
         return (
             <div className="students">
+                <div className="sub-header">
+                    <button onClick={this.handleAddCourseButton}>Add Course</button>
+                    {this.state.addStudentVisible && <button>Add Course</button>}
+                </div>
             <table>
                 <tbody>
                 <tr>
