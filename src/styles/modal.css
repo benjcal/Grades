@@ -1,5 +1,26 @@
 .modal-root {
-	filter: blur(3px);
-    overflow: hidden;
-    
+	filter: blur(1px);
+}
+
+.modal-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 110%;
+	width: 110%;
+	
+	background: rgba(9, 5, 10, 0.8);
+	z-index: 100;
+}
+
+.modal {
+	background: #fff;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	/* padding: 40px; */
+	z-index: 100;
+	filter: blur(0px) !important;
 }

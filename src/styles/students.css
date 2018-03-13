@@ -1,32 +1,62 @@
+.students input {
+	background: inherit;
+	font-family: inherit;
+	border: inherit;
+	font-size: inherit;
+	width: inherit;
+}
+
 .students .sub-header {
 	color: #FFF;
 	background: indigo;
-.modal-root {
-	filter: blur(3px);
-	/* transform: scale(1.01); */
 }
 
-.modal-bg {
+.students table {
+	width: 100%;
+}
+
+.add-student-header {
+	font-size: 32px;
+	padding: 20px;
+}
+
+.add-student-header svg {
+	background: #456;
+	padding: 10px;
+	border-radius: 50%;
+	color: #fff;
+	margin-right: 10px;
+}
+
+.add-student-inputs {
+	padding: 20px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 110%;
-	width: 110%;
-	
-	background: rgba(9, 5, 10, 0.2);
-	z-index: 100;
+	flex-direction: column;
 }
 
-.modal {
-	background: #fff;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-	border-radius: 10px;
-	padding: 100px;
-	z-index: 100;
-	filter: blur(0px) !important;
+.add-student-inputs input {
+	padding: 10px 0;
+	margin: 6px 0;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.add-student-buttons {
+	background: #456;
+}
+
+.add-student-buttons button {
+	color: #fff;
+	background: inherit;
+	border: none;
+	height: 40px;
+	width: 48px;
+	font-size: 24px;
+}
+
+.add-student-buttons .save {
+	background: #7c2ca1;
+	border: none;
 }
 
 td {

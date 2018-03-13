@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import 'styles/modal.css'
 
@@ -23,10 +23,20 @@ class Modal extends Component {
 
   render() {
     return ReactDOM.createPortal(
-      this.props.children,
+      modal(this.props.children),
       this.el,
     )
   }
 }
 
 export default Modal
+
+function modal(children) {
+  return (
+    <div className="modal-bg">
+      <div className="modal">
+        {children}
+      </div>
+    </div>
+  )        
+}
