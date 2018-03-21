@@ -1,4 +1,4 @@
-import { students } from './students'
+import students from './students'
 import { createStore } from 'redux'
 import { studentIdToKey } from 'libs/utils'
 
@@ -26,7 +26,7 @@ it('can add a new student', () => {
         payload: student1
     })
 
-    expect(store.getState().student1.fistName).toEqual('Ben')
+    expect(store.getState().student_1.fistName).toEqual('Ben')
 })
 
 it('can update student', () => {
@@ -39,15 +39,17 @@ it('can update student', () => {
         }
     })
 
-    expect(store.getState().student1.fistName).toEqual('Al')
-    expect(store.getState().student1.lastName).toEqual('Cal')
+    expect(store.getState().student_1.fistName).toEqual('Al')
+    expect(store.getState().student_1.lastName).toEqual('Cal')
 })
 
 it('can remove student', () => {
 
     store.dispatch({
         type: 'REMOVE_STUDENT',
-        payload: 1
+        payload: {
+            id: 1
+        }
     })
 
     expect(store.getState()).toEqual({})

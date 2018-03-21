@@ -1,7 +1,7 @@
 export function studentIdToKey(id) {
-    return `student${id}`
+    return `student_${id}`
 }
 
 export function courseIdToKey(id) {
-    return `course${id}`
+    return `course_${id}`
 }
