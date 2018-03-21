@@ -2,6 +2,7 @@
   "name": "grades",
   "version": "0.1.1",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "lodash": "^4.17.5",
     "mobx": "^3.6.1",
