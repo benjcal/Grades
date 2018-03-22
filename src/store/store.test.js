@@ -62,3 +62,27 @@ it('can add, update & remove a course', () => {
 
     expect(store.getState().courses).toEqual({})
 })
+
+it('can enroll students', ()=> {
+    store.dispatch({
+        type: 'ENROLL_STUDENT',
+        payload: {
+            student,
+            course
+        }
+    })
+
+    expect(store.getState().enroll.course_mt101).toEqual({student_u32: {}})
+})
+
+it('can enroll students', ()=> {
+    store.dispatch({
+        type: 'UNENROLL_STUDENT',
+        payload: {
+            student,
+            course
+        }
+    })
+
+    expect(store.getState().enroll.course_mt101).toEqual({})
+})
