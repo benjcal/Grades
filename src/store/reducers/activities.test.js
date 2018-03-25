@@ -16,7 +16,7 @@ it('can add an activity', () => {
         payload: activity
     })
 
-    expect(store.getState().activity_1.points).toEqual(100)
+    expect(store.getState()[activity.id].points).toEqual(100)
 })
 
 it('can update an activity', () => {
@@ -29,7 +29,7 @@ it('can update an activity', () => {
         }
     })
 
-    expect(store.getState().activity_1.points).toEqual(80)
+    expect(store.getState()[activity.id].points).toEqual(80)
 })
 
 it('can remove an activity', () => {

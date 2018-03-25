@@ -2,12 +2,12 @@ import { createStore, combineReducers } from 'redux'
 
 import courses from './reducers/courses'
 import students from './reducers/students'
-import enroll from './reducers/enroll'
+import courseStudents from './reducers/courseStudents'
 
 export default createStore(combineReducers(
     {
         courses,
         students,
-        enroll
+        courseStudents
     }
 ))

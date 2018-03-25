@@ -26,7 +26,7 @@ it('can add a new student', () => {
         payload: student1
     })
 
-    expect(store.getState().student_1.fistName).toEqual('Ben')
+    expect(store.getState()[student1.id].fistName).toEqual('Ben')
 })
 
 it('can update student', () => {
@@ -39,8 +39,8 @@ it('can update student', () => {
         }
     })
 
-    expect(store.getState().student_1.fistName).toEqual('Al')
-    expect(store.getState().student_1.lastName).toEqual('Cal')
+    expect(store.getState()[student1.id].fistName).toEqual('Al')
+    expect(store.getState()[student1.id].lastName).toEqual('Cal')
 })
 
 it('can remove student', () => {

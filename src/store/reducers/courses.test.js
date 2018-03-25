@@ -1,6 +1,6 @@
 import courses from './courses'
 import { createStore } from 'redux'
-import { studentIdToKey } from 'libs/utils'
+
 
 
 let store = createStore(courses)
@@ -20,7 +20,7 @@ it('can add a new course', () => {
         payload: course1
     })
 
-    expect(store.getState().course_1.name).toEqual(course1.name)
+    expect(store.getState()[course1.id].name).toEqual(course1.name)
 })
 
 it('can update course', () => {
@@ -33,8 +33,8 @@ it('can update course', () => {
         }
     })
 
-    expect(store.getState().course_1.name).toEqual('Science 7th')
-    expect(store.getState().course_1.grade).toEqual(course1.grade)
+    expect(store.getState()[course1.id].name).toEqual('Science 7th')
+    expect(store.getState()[course1.id].grade).toEqual(course1.grade)
 })
 
 it('can remove course', () => {

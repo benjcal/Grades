@@ -1,14 +1,16 @@
-import _ from 'lodash'
-import { courseIdToKey } from 'libs/utils'
+import assign from 'lodash.assign'
+import set from 'lodash.set'
+import merge from 'lodash.merge'
+import omit from 'lodash.omit'
 
 export default function courses(state = {}, action) {
     switch (action.type) {
         case 'ADD_COURSE':
-            return _.assign({}, state, _.set({}, courseIdToKey(action.payload.id), action.payload))
+            return assign({}, state, set({}, action.payload.id, action.payload))
         case 'UPDATE_COURSE':
-            return _.merge({}, state, _.set({}, courseIdToKey(action.payload.id), action.payload))
+            return merge({}, state, set({}, action.payload.id, action.payload))
         case 'REMOVE_COURSE':
-            return _.omit(state, courseIdToKey(action.payload.id))
+            return omit(state, action.payload.id)
         default:
             return state
     }
