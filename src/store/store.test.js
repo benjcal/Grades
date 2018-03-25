@@ -1,76 +1,103 @@
-// import store from './store'
+import store from './store'
 
-// let student = {
-//     id: 'u32',
-//     name: 'ben'
-// }
+let student1 = {
+    id: 1,
+    name: 'Ben'
+}
 
-// let course = {
-//     id: 'mt101',
-//     name: 'Math'
-// }
+let student2 = {
+    id: 2,
+    name: 'Grace'
+}
 
-// it('can add, update & remove a student', () => {
-//     store.dispatch({
-//         type: 'ADD_STUDENT',
-//         payload: student
-//     })
+let course1 = {
+    id: 1,
+    name: 'Math 101'
+}
 
-//     expect(store.getState().students[student.id]).toEqual(student)
+let course2 = {
+    id: 2,
+    name: 'Science 312'
+}
 
-//     store.dispatch({
-//         type: 'UPDATE_STUDENT',
-//         payload: {
-//             id: 'u32',
-//             name: 'fran'
-//         }
-//     })
+let activity1 = {
+    id: 1,
+    name: 'Quiz 1',
+    totalPoints: 40
+}
 
-//     expect(store.getState().students[student.id].name).toEqual('fran')
+let activity2 = {
+    id: 2,
+    name: 'Exam 2',
+    totalPoints: 120
+}
 
-//     store.dispatch({
-//         type: 'REMOVE_STUDENT',
-//         payload: student
-//     })
+it('can add student', () => {
+    store.addStudent(student1)
+    store.addStudent(student2)
 
-//     expect(store.getState().students).toEqual({})
-// })
+    expect(store.students[student1.id]).toEqual(student1)
+    expect(store.students[student2.id]).toEqual(student2)
+})
 
+it('can remove student', () => {
+    store.removeStudent(student1.id)
 
-// it('can add, update & remove a course', () => {
-//     store.dispatch({
-//         type: 'ADD_COURSE',
-//         payload: course
-//     })
-
-//     expect(store.getState().courses[course.id]).toEqual(course)
-
-//     store.dispatch({
-//         type: 'UPDATE_COURSE',
-//         payload: {
-//             id: 'mt101',
-//             name: 'M'
-//         }
-//     })
+    expect(store.students[student1.id]).toEqual(undefined)
+    expect(store.students[student2.id]).toEqual(student2)
     
-//     expect(store.getState().courses[course.id].name).toEqual('M')
+})
 
-//     store.dispatch({
-//         type: 'REMOVE_COURSE',
-//         payload: course
-//     })
 
-//     expect(store.getState().courses).toEqual({})
-// })
+it('can update student', () => {
+    student2.name = 'Albert'
 
-// // it('can enroll students', ()=> {
-// //     store.dispatch({
-// //         type: 'ENROLL_STUDENT',
-// //         payload: {
-// //             student,
-// //             course
-// //         }
-// //     })
+    store.updateStudent(student2)
 
-// //     expect(store.getState().enroll[course.id]).toEqual({student_u32: {}})
-// // })
+    expect(store.students[student2.id].name).toEqual('Albert')
+})
+
+
+
+it('can add course', () => {
+    store.addCourse(course1)
+    store.addCourse(course2)
+
+    expect(store.courses[course1.id]).toEqual(course1)
+    expect(store.courses[course2.id]).toEqual(course2)
+})
+
+it('can remove course', () => {
+    store.removeCourse(course1.id)
+
+    expect(store.courses[course1.id]).toEqual(undefined)
+    expect(store.courses[course2.id]).toEqual(course2)
+})
+
+it('can update course', () => {
+    course2.name = 'Rel 442'
+    store.updateCourse(course2)
+
+    expect(store.courses[course2.id].name).toEqual('Rel 442')
+
+})
+
+it('can enroll student', () => {
+    store.enrollStudent(course2.id, student1.id)
+    store.enrollStudent(course2.id, student2.id)
+    expect(store.courses[course2.id].students).toContain(student1.id)
+    expect(store.courses[course2.id].students).toContain(student2.id)
+})
+
+it('can unenroll students', () => {
+    store.unenrollStudent(course2.id, student1.id)
+    expect(store.courses[course2.id].students).not.toContain(student1.id)
+})
+
+it('can add activity', () => {
+    store.addActivity(activity1)
+    store.addActivity(activity2)
+
+    expect(store.activities[activity1.id]).toEqual(activity1)
+    expect(store.activities[activity2.id]).toEqual(activity2)
+})

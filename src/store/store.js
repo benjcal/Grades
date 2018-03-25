@@ -1,13 +1,74 @@
-import { createStore, combineReducers } from 'redux'
+import { observable, set } from 'mobx'
+import _pull from 'lodash.pull'
 
-import courses from './reducers/courses'
-import students from './reducers/students'
-import courseStudents from './reducers/courseStudents'
+const store = observable({
+    students: {},
+    courses: {},
+    activities: {},
+    grades: {},
 
-export default createStore(combineReducers(
-    {
-        courses,
-        students,
-        courseStudents
+    addStudent(student) {
+        if (this.students[student.id]) {
+            throw new Error('student already exists')
+        } else {
+            this.students[student.id] = student
+        }
+    },
+
+    updateStudent(student) {
+        this.students[student.id] = student
+    },
+
+    removeStudent(id) {
+        delete this.students[id]
+    },
+
+    addCourse(course) {
+        if (this.courses[course.id]) {
+            throw new Error('course already exists')
+        } else {
+            this.courses[course.id] = course
+        }
+    },
+
+    updateCourse(course) {
+        this.courses[course.id] = course
+    },
+
+    removeCourse(id) {
+        delete this.courses[id]
+    },
+
+    enrollStudent(courseId, studentId) {
+        if (!this.courses[courseId].students) {
+            this.courses[courseId].students = []
+            this.courses[courseId].students.push(studentId)
+        } else {
+            this.courses[courseId].students.push(studentId)
+        }
+    },
+
+    unenrollStudent(courseId, studentId) {
+        _pull(this.courses[courseId].students, studentId)
+    },
+
+    addActivity(activity) {
+        if (this.activities[activity.id]) {
+            throw new Error('activity already exists')
+        } else {
+            this.activities[activity.id] = activity
+        }
+        
+    },
+
+    updateActivity(activity) {
+        this.activities[activity.id] = activity
+    },
+
+    removeActivity(id) {
+        delete this.activities[id]
     }
-))
+    
+})
+
+export default store
