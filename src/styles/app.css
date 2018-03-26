@@ -7,3 +7,6 @@ main {
     grid-template-columns: auto 1fr;
 }
 
+input {
+    width: 120px;
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 import Board from 'react-icons/lib/md/assignment-turned-in'
-// import 'styles/header.css'
 
 export default (props) => 
     <header>

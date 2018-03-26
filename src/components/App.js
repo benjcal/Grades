@@ -4,6 +4,7 @@ import StudentsList from 'components/views/StudentsList'
 import LeftMenu from 'components/misc/LeftMenu'
 import studentsSample from 'store/data/studentsSample.json'
 import store from 'store/store'
+import DevTools from 'mobx-react-devtools'
 
 import 'styles/app.css'
 
@@ -18,6 +19,7 @@ class App extends Component {
     render() {
         return (
             <div className="app">
+                <DevTools />
                 <Header />
                 <main>
                     <LeftMenu />
