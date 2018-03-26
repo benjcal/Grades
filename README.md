@@ -1,6 +1,6 @@
 # Grades [![Build Status](https://travis-ci.org/benjcal/Grades.svg?branch=master)](https://travis-ci.org/benjcal/Grades)
 
-## Easy editing
+[Demo](https://benjcal.github.io/Grades/)
 
 ### Features
 
