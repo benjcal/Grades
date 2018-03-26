@@ -1,119 +1,41 @@
 import React from 'react'
 import SparkMD5 from 'spark-md5'
 import 'jdenticon'
+import store from 'store/store'
+import { observer } from 'mobx-react'
 
-export default function header(props) {
-    console.log(SparkMD5.hash)
+export default observer((props) => {
+    let { students } = store
     return (
-        <ul>
-            {list.map(n =>
-                <li>
-                    <canvas width="80" height="80" data-jdenticon-value={SparkMD5.hash(n)}></canvas>
-                </li>
-            )}
-    </ul>
-    )
-}
+        <div className="students-list">
+            <h1>Students List</h1>
+            <div className="table">
+                <div className="row header">
+                    <div className="col">ID</div>
+                    <div className="col">First Name</div>
+                    <div className="col">Last Name</div>
+                    <div className="col">Phone</div>
+                    <div className="col">Email</div>
+                </div>
+                <div className="row">
+                    {
+                        Object.entries(students).map(n => {
+                            let student = n[1]
+                            return (<div>
+                                <div className="col">{student.id}</div>
+                                <div className="col">{student.firstName}</div>
+                                <div className="col">{student.lastName}</div>
+                                <div className="col">{student.phone}</div>
+                                <div className="col">{student.email}</div>
+                            </div>
+                                
+                            )
+                        })
+                    }
+                </div>
+            </div>
 
-let list = [
-    "Boigie",
-    "Randolf",
-    "Sax",
-    "Gearalt",
-    "Iorgo",
-    "Verina",
-    "Val",
-    "Laura",
-    "Drew",
-    "Dene",
-    "Colette",
-    "Godwin",
-    "Sybil",
-    "Kyrstin",
-    "Gwyneth",
-    "Kingsly",
-    "Clim",
-    "Murry",
-    "Raimundo",
-    "Amaleta",
-    "Amitie",
-    "Gloriane",
-    "Thomasina",
-    "Roarke",
-    "Sarette",
-    "Genni",
-    "Stewart",
-    "Sondra",
-    "Richy",
-    "Briana",
-    "Lincoln",
-    "Devon",
-    "Kesley",
-    "Dolley",
-    "Zelig",
-    "Erhard",
-    "Gipsy",
-    "Gisela",
-    "Honey",
-    "Parrnell",
-    "Emmalynn",
-    "Colly",
-    "Vanda",
-    "Ozzie",
-    "Korrie",
-    "Daniel",
-    "Elvira",
-    "Ax",
-    "Kalie",
-    "Curtice",
-    "Norah",
-    "Lanita",
-    "Simonette",
-    "Amber",
-    "Kiri",
-    "Rena",
-    "Garreth",
-    "Halley",
-    "Charlena",
-    "Lizbeth",
-    "Shurlocke",
-    "Byram",
-    "Leslie",
-    "Reuben",
-    "Brod",
-    "Henrietta",
-    "Karleen",
-    "Holly",
-    "Donni",
-    "Tadeo",
-    "Aubree",
-    "Diego",
-    "Oliver",
-    "Rena",
-    "Jacquette",
-    "Rogers",
-    "Donica",
-    "Mady",
-    "Hilary",
-    "Willabella",
-    "Ursa",
-    "Barbara",
-    "Marius",
-    "Hobey",
-    "Fidelia",
-    "Tabbi",
-    "Bondon",
-    "Emilio",
-    "Wain",
-    "Trstram",
-    "Joletta",
-    "Iosep",
-    "Mala",
-    "Lyon",
-    "Jean",
-    "Albertine",
-    "Leola",
-    "Efren",
-    "Rich",
-    "Luke",
-]
+        </div>
+    )
+})
+    

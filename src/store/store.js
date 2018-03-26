@@ -1,4 +1,4 @@
-import { observable, set } from 'mobx'
+import { observable, autorun } from 'mobx'
 import _pull from 'lodash.pull'
 import _set from 'lodash.set'
 import _assign from 'lodash.assign'
@@ -81,5 +81,6 @@ const store = observable({
     }
 
 })
+
 
 export default store

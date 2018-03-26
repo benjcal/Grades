@@ -1,0 +1,12 @@
+.table .row {
+    display: flex;
+}
+
+.table .col{
+    padding: 0 10px;
+    display: inline;
+}
+
+.table .row.header {
+    background: #456;
+}

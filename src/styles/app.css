@@ -1,5 +1,6 @@
 @import "_header.css";
 @import "_left-menu.css";
+@import "_table.css";
 
 main {
     display: grid;
