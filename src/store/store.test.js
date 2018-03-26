@@ -1,4 +1,5 @@
 import store from './store'
+import { toJS } from 'mobx'
 
 let student1 = {
     id: 1,
@@ -100,4 +101,27 @@ it('can add activity', () => {
 
     expect(store.activities[activity1.id]).toEqual(activity1)
     expect(store.activities[activity2.id]).toEqual(activity2)
+})
+
+it('can update and activity', () => {
+    activity1.totalPoints = 45
+    store.updateActivity(activity1)
+
+    expect(store.activities[activity1.id].totalPoints).toEqual(45)
+})
+
+it('can remove and activity', () => {
+    store.removeActivity(activity1.id)
+
+    expect(store.activities[activity1.id]).toEqual(undefined)
+})
+
+it('can grade an activity', () => {
+    store.gradeActivity(activity1.id, student2.id, 17)
+    store.gradeActivity(activity2.id, student2.id, 71)
+    store.gradeActivity(activity1.id, student1.id, 40)
+    store.gradeActivity(activity2.id, student1.id, 83)
+
+    expect(store.grades[activity1.id][student2.id]).toEqual(17)
+    expect(store.grades[activity2.id][student2.id]).toEqual(71)
 })

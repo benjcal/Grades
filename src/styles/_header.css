@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    align-items: center;
+    background: #5e4466;
+    color: #FFF;
+    height: 60px;
+    font-size: 24px;
+}
+
+header .logo {
+    flex: 0 0 140px;
+}
+
+header .logo svg {
+    padding: 0 10px;
+    color: #FFF;
+}
+
+header .search {
+    flex: 1 1 auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+header .right {
+    flex: 0 0 140px;
+}

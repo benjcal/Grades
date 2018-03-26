@@ -1,0 +1,8 @@
+@import "_header.css";
+@import "_left-menu.css";
+
+main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+

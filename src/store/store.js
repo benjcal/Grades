@@ -1,5 +1,7 @@
 import { observable, set } from 'mobx'
 import _pull from 'lodash.pull'
+import _set from 'lodash.set'
+import _assign from 'lodash.assign'
 
 const store = observable({
     students: {},
@@ -58,7 +60,7 @@ const store = observable({
         } else {
             this.activities[activity.id] = activity
         }
-        
+
     },
 
     updateActivity(activity) {
@@ -67,8 +69,17 @@ const store = observable({
 
     removeActivity(id) {
         delete this.activities[id]
+    },
+
+    gradeActivity(activityId, studentId, grade) {
+        if (!this.grades[activityId]) {
+            this.grades[activityId] = {}
+            _assign(this.grades[activityId], _set({}, studentId, grade))
+        } else {
+            _assign(this.grades[activityId], _set({}, studentId, grade))
+        }
     }
-    
+
 })
 
 export default store
