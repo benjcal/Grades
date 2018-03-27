@@ -19,6 +19,7 @@ class StudentRow extends Component {
         this.clear = this.clear.bind(this)
         this.save = this.save.bind(this)
         this.change = this.change.bind(this)
+        this.remove = this.remove.bind(this)
     }
 
     edit(e, student) {
@@ -28,8 +29,7 @@ class StudentRow extends Component {
          }
     }
 
-    clear(student) {
-        console.log(student)
+    clear() {
         this.setState({editing: !this.state.editing})
     }
 
@@ -47,10 +47,12 @@ class StudentRow extends Component {
 
         this.setState({newStudent: Object.assign({}, this.state.newStudent, obj)})
     }
+    remove(id) {
+        this.props.store.removeStudent(id)
+    }
 
     render() {
-        let { studentId, store } = this.props
-        let student = store.students.get(studentId)
+        let { student} = this.props
         return (
             <tr>
                 <th scope="row">{student.id}</th>
@@ -63,16 +65,17 @@ class StudentRow extends Component {
                             value={this.state.newStudent.first}
                             onChange={(e) => {this.change(e)}}
                             autoFocus
+                            onKeyPress={(e) => e.key === 'Enter' ? this.save() : null}
                         />
                         <Ok style={{color: 'green'}} onClick={() => {this.save()}}/>
-                        <Clear style={{color: 'red'}} onClick={() => {this.clear(student)}}/>
+                        <Clear style={{color: 'red'}} onClick={() => {this.clear()}}/>
                     </span>
                     : student.first
                 }</td>
                 <td>{student.last}</td>
                 <td>{student.email}</td>
                 <td>{student.phone}</td>
-                <td style={{color: '#a17575'}}><Delete /></td>
+                <td style={{color: '#a17575'}} onClick={() => this.remove(student.id)}><Delete /></td>
             </tr>
         )
     }

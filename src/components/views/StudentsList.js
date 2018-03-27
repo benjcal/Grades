@@ -23,8 +23,9 @@ const StudentsList = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.store.students.entries().map(n => 
-                        <StudentRow studentId={n[0]} key={n[0]} />
+                    {props.store.students.entries().map(n => {
+                        return <StudentRow student={n[1]} key={n[0]} />
+                    }
                     )}
                 </tbody>
             </table>
