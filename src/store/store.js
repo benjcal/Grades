@@ -1,84 +1,81 @@
 import { observable } from 'mobx'
-import _pull from 'lodash.pull'
-import _set from 'lodash.set'
-import _assign from 'lodash.assign'
 
 const store = observable({
-    students: observable.map({}),
-    courses: {},
-    activities: {},
-    grades: {},
+    students: observable.map(),
+    courses: observable.map(),
+    activities: observable.map(),
+    grades: observable.map(),
+    enrollment: observable.map(),
 
     addStudent(student) {
-        if (this.students[student.id]) {
+        if (this.students.has(student.id)) {
             throw new Error('student already exists')
         } else {
-            // this.students[student.id] = observable.map(student)
             this.students.set(student.id, student)
         }
     },
 
     updateStudent(student) {
         this.students.set(student.id, student)
-        // this.students[student.id] = observable.map(student)
     },
 
     removeStudent(id) {
-        delete this.students[id]
+        this.students.delete(id)
     },
 
     addCourse(course) {
-        if (this.courses[course.id]) {
+        if (this.courses.has(course.id)) {
             throw new Error('course already exists')
         } else {
-            this.courses[course.id] = course
+            this.courses.set(course.id, course)
         }
     },
 
     updateCourse(course) {
-        this.courses[course.id] = course
+        this.courses.set(course.id, course)
     },
 
     removeCourse(id) {
-        delete this.courses[id]
+        this.courses.delete(id)
     },
 
     enrollStudent(courseId, studentId) {
-        if (!this.courses[courseId].students) {
-            this.courses[courseId].students = []
-            this.courses[courseId].students.push(studentId)
+        if (!this.enrollment.get(courseId)) {
+            
+            this.enrollment.set(courseId, observable.array([]))
+            this.enrollment.get(courseId).push(studentId)
         } else {
-            this.courses[courseId].students.push(studentId)
+            this.enrollment.get(courseId).push(studentId)
         }
     },
 
     unenrollStudent(courseId, studentId) {
-        _pull(this.courses[courseId].students, studentId)
+        this.enrollment.get(courseId).remove(studentId)
     },
 
     addActivity(activity) {
-        if (this.activities[activity.id]) {
+        if (this.activities.has(activity.id)) {
             throw new Error('activity already exists')
         } else {
-            this.activities[activity.id] = activity
+            this.activities.set(activity.id, activity)
         }
 
     },
 
     updateActivity(activity) {
-        this.activities[activity.id] = activity
+        this.activities.set(activity.id, activity)
     },
 
     removeActivity(id) {
-        delete this.activities[id]
+        this.activities.delete(id)
     },
 
     gradeActivity(activityId, studentId, grade) {
-        if (!this.grades[activityId]) {
-            this.grades[activityId] = {}
-            _assign(this.grades[activityId], _set({}, studentId, grade))
+        if (!this.grades.has(activityId)) {
+            this.grades.set(activityId, observable.map({}))
+            this.grades.get(activityId).set(studentId, grade)
         } else {
-            _assign(this.grades[activityId], _set({}, studentId, grade))
+            this.grades.get(activityId).set(studentId, grade)
         }
     }
 

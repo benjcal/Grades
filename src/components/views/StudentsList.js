@@ -8,12 +8,7 @@ const StudentsList = (props) => {
     return (
         <div className="students-list">
             <div className="view-header" style={{display: 'flex', background: '#4c3652', color: '#FFF'}}>
-                <h1 onClick={() => { props.store.updateStudent({id: 1, first: 'hello'}) }}>
-                    Students List</h1>
-                <button 
-                    onClick={() => { props.store.updateStudent({id: 1, first: 'hello'}) }}
-                    className="btn btn-primary" style={{height: '40px', margin: '0 40px'}}>Add Student</button>
-                    <h2>{props.store.students.get(1).first}</h2>
+                <h1>Students List</h1>
             </div>
             <table className="table table-hover">
                 <thead className="thead-light">
@@ -29,7 +24,7 @@ const StudentsList = (props) => {
                 </thead>
                 <tbody>
                     {props.store.students.entries().map(n => 
-                        <StudentRow student={n[1]} key={n[0]} />
+                        <StudentRow studentId={n[0]} key={n[0]} />
                     )}
                 </tbody>
             </table>

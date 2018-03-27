@@ -49,7 +49,8 @@ class StudentRow extends Component {
     }
 
     render() {
-        let { student } = this.props
+        let { studentId, store } = this.props
+        let student = store.students.get(studentId)
         return (
             <tr>
                 <th scope="row">{student.id}</th>
@@ -77,4 +78,4 @@ class StudentRow extends Component {
     }
 }
 
-export default inject('store')(StudentRow)
+export default inject('store')(observer(StudentRow))
