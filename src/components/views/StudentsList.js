@@ -4,15 +4,16 @@ import { observer, inject } from 'mobx-react'
 import StudentRow from 'components/views/StudentsList/StudentRow'
 
 const StudentsList = (props) => {
-    let { store } = props
+    // let { store } = props
     return (
         <div className="students-list">
             <div className="view-header" style={{display: 'flex', background: '#4c3652', color: '#FFF'}}>
-                <h1 onClick={() => { store.updateStudent({id: 1, fist: 'hello'}) }}>
+                <h1 onClick={() => { props.store.updateStudent({id: 1, first: 'hello'}) }}>
                     Students List</h1>
                 <button 
-                    onClick={() => { store.updateStudent({id: 1, fist: 'hello'}) }}
+                    onClick={() => { props.store.updateStudent({id: 1, first: 'hello'}) }}
                     className="btn btn-primary" style={{height: '40px', margin: '0 40px'}}>Add Student</button>
+                    <h2>{props.store.students.get(1).first}</h2>
             </div>
             <table className="table table-hover">
                 <thead className="thead-light">
@@ -27,8 +28,8 @@ const StudentsList = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {Object.keys(store.students).map(n => 
-                        <StudentRow studentId={n} key={n} />    
+                    {props.store.students.entries().map(n => 
+                        <StudentRow student={n[1]} key={n[0]} />
                     )}
                 </tbody>
             </table>

@@ -4,7 +4,7 @@ import _set from 'lodash.set'
 import _assign from 'lodash.assign'
 
 const store = observable({
-    students: {},
+    students: observable.map({}),
     courses: {},
     activities: {},
     grades: {},
@@ -13,12 +13,14 @@ const store = observable({
         if (this.students[student.id]) {
             throw new Error('student already exists')
         } else {
-            this.students[student.id] = student
+            // this.students[student.id] = observable.map(student)
+            this.students.set(student.id, student)
         }
     },
 
     updateStudent(student) {
-        this.students[student.id] = student
+        this.students.set(student.id, student)
+        // this.students[student.id] = observable.map(student)
     },
 
     removeStudent(id) {

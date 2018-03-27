@@ -19,7 +19,6 @@ class StudentRow extends Component {
         this.clear = this.clear.bind(this)
         this.save = this.save.bind(this)
         this.change = this.change.bind(this)
-        this.store = props.store
     }
 
     edit(e, student) {
@@ -35,7 +34,7 @@ class StudentRow extends Component {
     }
 
     save() {
-        console.log(this.store.updateStudent(this.state.newStudent))
+        this.props.store.updateStudent(this.state.newStudent)
         this.setState({editing: !this.state.editing})
     }
 
@@ -50,8 +49,7 @@ class StudentRow extends Component {
     }
 
     render() {
-        let { store, studentId } = this.props
-        let student = store.students[studentId]
+        let { student } = this.props
         return (
             <tr>
                 <th scope="row">{student.id}</th>
@@ -79,4 +77,4 @@ class StudentRow extends Component {
     }
 }
 
-export default inject('store')(observer(StudentRow))
+export default inject('store')(StudentRow)
