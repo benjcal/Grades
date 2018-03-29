@@ -48,10 +48,12 @@ const store = observable({
             this.enrollment.get(courseId).push(studentId)
         }
     },
-
     unenrollStudent(courseId, studentId) {
         this.enrollment.get(courseId).remove(studentId)
     },
+    enrolledStudents(courseId) {
+        return computed(() => this.enrollment.get(courseId).map(n => this.students.get(n))).get()    
+     },
 
     addActivity(activity) {
         if (this.activities.has(activity.id)) {
@@ -77,7 +79,8 @@ const store = observable({
         } else {
             this.grades.get(activityId).set(studentId, grade)
         }
-    }
+    },
+    
 
 })
 
