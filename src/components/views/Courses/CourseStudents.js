@@ -10,7 +10,7 @@ const CourseStudents = (props) => {
                 <span className="name">NAME</span>
             </div>
             {store.enrolledStudents(store.currentCourse).map(n => 
-                <CourseStudentRow student={n} />
+                <CourseStudentRow student={n} key={n.id}/>
             )}
         </div>
     )
@@ -22,7 +22,7 @@ class CourseStudentRow extends Component {
     render() {
         let {student} = this.props
         return (
-            <div className="student" key={student.id}>
+            <div className="student">
                 <div className="id">{student.id}</div>
                 <div className="name">{student.first} {student.last}</div>
             </div>

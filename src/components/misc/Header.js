@@ -12,44 +12,72 @@ class Header extends Component {
             courses: [],
             students: [],
             activities: [],
-            selected: 0
+            selected: 1
         }
 
         this.search = this.search.bind(this)
         this.select = this.select.bind(this)
+        this.arrowKeys = this.arrowKeys.bind(this)
     }
     
     search(e) {
         this.setState({value: e.target.value})
+        this.setState({selected: 0})
         
         // eslint-disable-next-line
         let courses = store.courses.values().filter(n => {
-            if (n.name.toLowerCase().toLowerCase().includes(this.state.value)) {
+            if (n.name.toLowerCase().includes(e.target.value)) {
                 return n
             }
         })
         // eslint-disable-next-line
         let students = store.students.values().filter(n => {
-            if (n.first.toLowerCase().includes(this.state.value) | n.last.toLowerCase().includes(this.state.value)) {
+            if (n.first.toLowerCase().includes(e.target.value) | n.last.toLowerCase().includes(e.target.value)) {
                 return n
             }
         })
         // eslint-disable-next-line
-        let activities = store.students.values().filter(n => {
-            if (n.first.toLowerCase().includes(this.state.value) | n.last.toLowerCase().includes(this.state.value)) {
+        let activities = store.activities.values().filter(n => {
+            if (n.name.toLowerCase().includes(e.target.value)) {
                 return n
             }
         })
 
         this.setState({courses, students, activities})
-
     }
 
     select(id, category) {
         if (category === 'course') {
             store.selectCourse(id)
         }
+        if (category === 'student') {
+            console.log('student!', id)
+        }
+        if (category === 'activity') {
+            store.setView('course' + store.currentCourse + 'activity')
+        }
         this.setState({value: ''})
+    }
+
+    arrowKeys(e) {
+        if (e.key === 'ArrowDown') {
+            this.setState({selected: this.state.selected + 1})
+        }
+        if (e.key === 'ArrowUp') {
+            this.setState({selected: this.state.selected - 1})
+        }
+        if (e.key === 'Enter') {
+            if (this.state.selected < this.state.courses.length) {
+                this.select(this.state.courses[this.state.selected].id, 'course')
+            }
+            if (this.state.selected > this.state.courses.length && this.state.selected < this.state.courses.length + this.state.students.length) {
+                this.select(this.state.students[this.state.selected - this.state.courses.length], 'student')
+            }
+            if (this.state.selected > this.state.courses.length + this.state.students.length) {
+                this.select(this.state.students[this.state.selected - this.state.courses.length], 'activity')
+            }
+            
+        }
     }
 
     render() {
@@ -65,6 +93,9 @@ class Header extends Component {
                             placeholder='Search for a course, student or assignment'
                             value={this.state.value}
                             onChange={this.search}
+                            onBlur={() => {this.setState({value: ''})}}
+                            onKeyDown={this.arrowKeys}
+                            ref={(e) => {this.searchElement = e}}
                             />
                     </div>
                     {this.state.value.length > 0 &&
@@ -72,9 +103,9 @@ class Header extends Component {
                             className="search-results">
 
                             {courses.length > 0 && <div className="category">COURSES:</div>}
-                            {courses.map(j => 
+                            {courses.map((j, i) => 
                                 <div
-                                    className="result"
+                                    className={["result", this.state.selected === i ? 'active' : null].join(' ')}
                                     onClick={() => {this.select(j.id, 'course')}}
                                     key={j.id}>{j.name}</div>    
                             )
@@ -82,15 +113,19 @@ class Header extends Component {
 
                             {students.length > 0 && <div className="category">STUDENTS:</div>}
                             {   // eslint-disable-next-line
-                                students.map(j => 
-                                <div className="result" key={j.id}>{j.first} {j.last}</div>
+                                students.map((j, i) => 
+                                <div
+                                    className={["result", this.state.selected === i + courses.length ? 'active' : null].join(' ')}
+                                    key={j.id}>{j.first} {j.last}</div>
                             )
                             }
 
                             {activities.length > 0 && <div className="category">ACTIVITIES:</div>}
                             {   // eslint-disable-next-line
-                                activities.map(j => 
-                                <div className="result" key={j.id}>{j.name}</div>
+                                activities.map((j, i) => 
+                                <div
+                                    className={["result", this.state.selected === i + courses.length + students.length? 'active' : null].join(' ')}
+                                    key={j.id}>{j.name} {j.id}</div>
                             )
                             }
 

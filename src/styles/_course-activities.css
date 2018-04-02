@@ -1,4 +1,4 @@
-.course-students .head {
+.course-activities .head {
     font-weight: 500;
     color: rgba(251,251,255,0.50);
     background: linear-gradient(0deg, #515151 0%, #757575 100%);
@@ -8,31 +8,27 @@
     height: 40px;
 }
 
-.course-students .head .id {
+.course-activities .id {
     flex: 0 0 60px;
     margin-left: 20px;
 }
 
-.course-students .head .name {
+.course-activities .name {
     flex: 1 1 auto;
 }
 
-.course-students .student {
+.course-activities .points {
+    flex: 0 0 120px;
+    text-align: center;
+}
+
+.course-activities .activity {
     display: flex;
     padding: 16px 0;
     font-size: 18px;
     color: #757575;
 }
 
-.course-students .student:nth-child(even) {
+.course-activities .activity:nth-child(even) {
     background: #FBFBFF
-}
-
-.course-students .student .id {
-    flex: 0 0 60px;
-    margin-left: 20px;
-}
-
-.course-students .student .name {
-    flex: 1 1 auto;
 }

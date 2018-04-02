@@ -1,10 +1,10 @@
-.secondary-menu {
+.courses-sub-menu {
     background: #09384C;
     flex: 0 0 200px;
     color: rgba(251, 251, 255, 0.50);
 }
 
-.secondary-menu .title {
+.courses-sub-menu .title {
     font-weight: 500;
     font-size: 20px;
     text-transform: uppercase;
@@ -16,7 +16,7 @@
     padding: 0 20px;
 }
 
-.secondary-menu .item {
+.courses-sub-menu .item {
     font-weight: 500;
     
     display: flex;
@@ -28,17 +28,29 @@
     cursor: pointer;
 }
 
-.secondary-menu .item.active {
+.courses-sub-menu .item.active {
     background: #061e29;
     padding-left: 17px;
     border-left: 3px solid #01BAEF;
 }
 
-.secondary-menu .item:hover {
+.courses-sub-menu .item:hover {
     background: #061e29;
 }
 
-.secondary-menu .item .name {
+.courses-sub-menu .item .name {
     flex: 1 1 auto;
     color: rgba(251, 251, 255, 0.70);
+}
+
+.courses-sub-menu .subitem {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.courses-sub-menu .subitem:hover {
+    font-weight: 700;
 }

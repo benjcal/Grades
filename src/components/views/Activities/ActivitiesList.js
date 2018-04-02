@@ -7,26 +7,16 @@ class ActivitiesList extends Component {
         super(props)
 
         this.state = {
-            course: 1
-        }
-
-        this.courseChange = this.courseChange.bind(this)
-    }
-
-    courseChange(e) {
-        if (e.target.value === "") {
-            this.setState({course: e.target.value})
-        } else {
-            this.setState({course: parseInt(e.target.value,10)})
+            course: 2
         }
     }
+
 
 
     render() {
         return (
             <div className="activities-list">
-                <span>Course <input type="text" value={this.state.course} onChange={this.courseChange}/></span>
-                {store.listActivities(this.state.course).map(n => 
+                {store.listActivities(store.currentCourse).map(n => 
                     <div className="activity" key={n.id}>
                         <span>ID: {n.id} </span>
                         <span>Name: {n.name} </span>
@@ -35,7 +25,6 @@ class ActivitiesList extends Component {
                     </div>
                 )}
             </div>
-            
         )
     }
 }
