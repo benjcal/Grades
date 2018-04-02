@@ -60,6 +60,7 @@ const store = observable({
             throw new Error('activity already exists')
         } else {
             this.activities.set(activity.id, activity)
+            this.grades.set(activity.id, observable.map({}))
         }
 
     },
@@ -77,13 +78,18 @@ const store = observable({
             this.grades.get(activityId).set(studentId, grade)
         }
     },
+    activityGrade(activityId, studentId) {
+        return computed(() => this.grades.get(activityId).get(studentId)).get()
+        
+    },
     listActivities(courseId) {
-        return computed(() => {
-            return this.activities.values().filter(n => {
+        // eslint-disable-next-line
+        return computed(() => this.activities.values().filter((n) => {
             if (n.course_id === courseId) {
-                return this.courses.get(n.course_id)}
+                return this.courses.get(n.course_id)
             }
-        )}).get()
+        }
+        )).get()
     },
     
 

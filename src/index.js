@@ -12,6 +12,9 @@ window.$store = store
 
 studentsSample.forEach(n => {
     store.addStudent(n)
+    if (n.id < 7) {
+        store.enrollStudent(1, n.id)
+    }
 })
 
 coursesSample.forEach(n => {
@@ -21,6 +24,8 @@ coursesSample.forEach(n => {
 activitiesSample.forEach(n => {
     store.addActivity(n)
 })
+
+
 
 ReactDOM.render(
     <Provider store={store} >

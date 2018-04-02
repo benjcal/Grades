@@ -1,8 +1,9 @@
 import React from 'react'
 import Header from 'components/misc/Header'
-import StudentsList from 'components/views/StudentsList'
-import CoursesList from 'components/views/CoursesList/CoursesList'
-import ActivitiesList from 'components/views/ActivitiesList'
+// import StudentsList from 'components/views/StudentsList'
+// import CoursesList from 'components/views/CoursesList/CoursesList'
+// import ActivitiesList from 'components/views/ActivitiesList'
+import GradesList from 'components/views/GradesList'
 import LeftMenu from 'components/misc/LeftMenu'
 
 import DevTools from 'mobx-react-devtools'
@@ -16,7 +17,9 @@ export default (props) =>
             <LeftMenu />
             {/* <CoursesList /> */}
             {/* <StudentsList /> */}
-            <ActivitiesList />
+            {/* <ActivitiesList /> */}
+            <GradesList />
+
 
         </main>
     </div>
