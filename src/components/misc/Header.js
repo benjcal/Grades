@@ -12,13 +12,42 @@ class Header extends Component {
         }
 
         this.search = this.search.bind(this)
+        this.select = this.select.bind(this)
     }
     
     search(e) {
         this.setState({value: e.target.value})
     }
 
+    select(id, category) {
+        if (category === 'course') {
+            store.selectCourse(id)
+        }
+        this.setState({value: ''})
+    }
+
     render() {
+        // eslint-disable-next-line
+        let courses = store.courses.values().filter(n => {
+            if (n.name.toLowerCase().toLowerCase().includes(this.state.value)) {
+                return n
+            }
+        })
+
+        // eslint-disable-next-line
+        let students = store.students.values().filter(n => {
+            if (n.first.toLowerCase().includes(this.state.value) | n.last.toLowerCase().includes(this.state.value)) {
+                return n
+            }
+        })
+
+        // eslint-disable-next-line
+        let activities = store.students.values().filter(n => {
+            if (n.first.toLowerCase().includes(this.state.value) | n.last.toLowerCase().includes(this.state.value)) {
+                return n
+            }
+        })
+
         return (
             <header>
                 <div className='search'>
@@ -34,35 +63,25 @@ class Header extends Component {
                     {this.state.value.length > 0 &&
                         <div className="search-results">
 
-                            <div className="category">COURSES:</div>
-                            {   // eslint-disable-next-line
-                                store.courses.values().filter(n => {
-                                if (n.name.toLowerCase().toLowerCase().includes(this.state.value)) {
-                                    return n
-                                }
-                            }).map(j => 
-                                <div className="result" key={j.id}>{j.name}</div>    
+                            {courses.length > 0 && <div className="category">COURSES:</div>}
+                            {courses.map(j => 
+                                <div
+                                    className="result"
+                                    onClick={() => {this.select(j.id, 'course')}}
+                                    key={j.id}>{j.name}</div>    
                             )
                             }
 
-                            <div className="category">STUDENTS:</div>
+                            {students.length > 0 && <div className="category">STUDENTS:</div>}
                             {   // eslint-disable-next-line
-                                store.students.values().filter(n => {
-                                if (n.first.toLowerCase().includes(this.state.value) | n.last.toLowerCase().includes(this.state.value)) {
-                                    return n
-                                }
-                            }).map(j => 
+                                students.map(j => 
                                 <div className="result" key={j.id}>{j.first} {j.last}</div>
                             )
                             }
 
-                            <div className="category">ACTIVITIES:</div>
+                            {activities.length > 0 && <div className="category">ACTIVITIES:</div>}
                             {   // eslint-disable-next-line
-                                store.activities.values().filter(n => {
-                                if (n.name.toLowerCase().includes(this.state.value)) {
-                                    return n
-                                }
-                            }).map(j => 
+                                activities.map(j => 
                                 <div className="result" key={j.id}>{j.name}</div>
                             )
                             }
