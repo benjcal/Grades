@@ -1,4 +1,4 @@
-import { observable } from 'mobx'
+import { observable, computed } from 'mobx'
 
 const store = observable({
     students: observable.map(),
@@ -52,7 +52,7 @@ const store = observable({
         this.enrollment.get(courseId).remove(studentId)
     },
     enrolledStudents(courseId) {
-        return computed(() => this.enrollment.get(courseId).map(n => this.students.get(n))).get()    
+        return computed(() => this.enrollment.get(courseId).map(n => this.students.get(n))).get()
      },
 
     addActivity(activity) {
@@ -63,15 +63,12 @@ const store = observable({
         }
 
     },
-
     updateActivity(activity) {
         this.activities.set(activity.id, activity)
     },
-
     removeActivity(id) {
         this.activities.delete(id)
     },
-
     gradeActivity(activityId, studentId, grade) {
         if (!this.grades.has(activityId)) {
             this.grades.set(activityId, observable.map({}))
@@ -79,6 +76,14 @@ const store = observable({
         } else {
             this.grades.get(activityId).set(studentId, grade)
         }
+    },
+    listActivities(courseId) {
+        return computed(() => {
+            return this.activities.values().filter(n => {
+            if (n.course_id === courseId) {
+                return this.courses.get(n.course_id)}
+            }
+        )}).get()
     },
     
 

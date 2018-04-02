@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from 'components/misc/Header'
 import StudentsList from 'components/views/StudentsList'
+import CoursesList from 'components/views/CoursesList/CoursesList'
+import ActivitiesList from 'components/views/ActivitiesList'
 import LeftMenu from 'components/misc/LeftMenu'
 
 import DevTools from 'mobx-react-devtools'
@@ -12,6 +14,9 @@ export default (props) =>
         <Header />
         <main>
             <LeftMenu />
-            <StudentsList />
+            {/* <CoursesList /> */}
+            {/* <StudentsList /> */}
+            <ActivitiesList />
+
         </main>
     </div>
