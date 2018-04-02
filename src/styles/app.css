@@ -1,13 +1,18 @@
 @import "_header.css";
 @import "_left-menu.css";
+@import "_secondary-menu.css";
 @import "_table.css";
+@import "_courses-list.css";
 
 
 #root {
     height: 100%;
 }
 .app {
-    display: grid;
-    grid-template-columns: 200px auto;
+    display: flex;
     height: 100%;
+}
+
+main {
+    flex: 1 1 auto;
 }

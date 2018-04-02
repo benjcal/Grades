@@ -6,6 +6,20 @@ const store = observable({
     activities: observable.map(),
     grades: observable.map(),
     enrollment: observable.map(),
+    currentView: 'course1',
+    currentCourse: 1,
+
+    selectCourse(id) {
+        this.currentCourse = id
+        this.currentView = 'course' + id
+    },
+
+    setView(view) {
+        if (view === 'courses') {
+            this.currentCourse = null
+        }
+        this.currentView = view
+    },
 
     addStudent(student) {
         if (this.students.has(student.id)) {
@@ -52,7 +66,11 @@ const store = observable({
         this.enrollment.get(courseId).remove(studentId)
     },
     enrolledStudents(courseId) {
-        return computed(() => this.enrollment.get(courseId).map(n => this.students.get(n))).get()
+        if (this.enrollment.get(courseId)) {
+            return computed(() => this.enrollment.get(courseId).map(n => this.students.get(n))).get()
+        } else {
+            return []
+        }
      },
 
     addActivity(activity) {

@@ -1,41 +1,54 @@
 import React from 'react'
 import HomeIcon from 'react-icons/lib/md/home'
-import CoursesIcon from 'react-icons/lib/md/assignment-turned-in'
+import ActivitiesIcon from 'react-icons/lib/md/library-books'
+import GradesIcon from 'react-icons/lib/md/assignment-turned-in'
+import CoursesIcon from 'react-icons/lib/md/class'
 import StudentsIcon from 'react-icons/lib/md/people'
 import SettingsIcon from 'react-icons/lib/md/settings'
-import gradesLogo from 'img/grades_logo.png'
+import { observer } from 'mobx-react'
 
-export default (props) => {
-    let { callback, active } = props
+import store from 'store/store'
 
+const LeftMenu = () => {
     return (
         <nav className='left-menu'>
-            <div className="logo">
-                <img src={gradesLogo} alt=""/>
-            </div>
             <div
-                className={['item', active === 'home' ? 'active' : null].join(' ')}
-                onClick={() => {callback('home')}}>
+                className={['item', store.currentView === 'home' ? 'active' : null].join(' ')}
+                onClick={() => {store.setView('home')}}>
                 <i><HomeIcon /></i>
-                Home
             </div>
 
             <div
-                className={['item', active === 'courses' ? 'active' : null].join(' ')}
-                onClick={() => {callback('courses')}}>
+                className={['item', store.currentView === 'courses' ? 'active' : null].join(' ')}
+                onClick={() => {store.setView('courses')}}>
                 <i><CoursesIcon /></i>
-                Courses
             </div>
 
             <div
-                className={['item', active === 'students' ? 'active' : null].join(' ')}
-                onClick={() => {callback('students')}}>
+                className={['item', store.currentView === 'students' ? 'active' : null].join(' ')}
+                onClick={() => {store.setView('students')}}>
                 <i><StudentsIcon /></i>
-                Students
             </div>
 
+            <div
+                className={['item', store.currentView === 'activities' ? 'active' : null].join(' ')}
+                onClick={() => {store.setView('activities')}}>
+                <i><ActivitiesIcon /></i>
+            </div>
 
-            <div className='item'><i><SettingsIcon /></i>Settings</div>
+            <div
+                className={['item', store.currentView === 'grades' ? 'active' : null].join(' ')}
+                onClick={() => {store.setView('grades')}}>
+                <i><GradesIcon /></i>
+            </div>
+
+            <div
+                className={['item', store.currentView === 'settings' ? 'active' : null].join(' ')}
+                onClick={() => {store.setView('settings')}}>
+                <i><SettingsIcon /></i>
+            </div>
         </nav>
     )
 }
+
+export default observer(LeftMenu)

@@ -1,30 +1,22 @@
 .left-menu {
     background: #0B4F6C;
-    color: rgba(251, 251, 255, 0.69);
+    color: rgba(251, 251, 255, 0.70);
     user-select: none;
     height: 100%;
-}
-
-.left-menu .logo {
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left-menu .logo img {
-    width: 100px;
+    flex: 0 0 80px
 }
 
 .left-menu .item {
-    padding: 20px;
     cursor: pointer;
-}
-.left-menu .item i {
-    padding-right: 10px;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 80px;
 }
 .left-menu .item.active {
-    padding: 20px 17px;
     background: #09384C;
     border-left: 3px solid #01BAEF;
 }

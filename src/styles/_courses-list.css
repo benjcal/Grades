@@ -1,0 +1,32 @@
+.courses-list {
+    display: flex;
+    /* width: 800px;
+    height: 400px; */
+    flex-flow: row wrap;
+}
+
+.courses-list .course {
+    background: #FBFBFF;
+    flex: 0 0 120px;
+    margin: 20px;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #cecece;
+    padding: 20px;
+    transition: ease all 0.3s;
+    cursor: pointer;
+}
+
+.courses-list .course:hover {
+    background: #FBFBFF;
+    box-shadow: 0 0 20px #000;
+}
+
+.courses-list .course .name {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.courses-list .course .count {
+    color: #777;
+}

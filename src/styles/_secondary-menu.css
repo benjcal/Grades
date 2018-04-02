@@ -1,0 +1,42 @@
+.secondary-menu {
+    background: #09384C;
+    flex: 0 0 200px;
+    color: rgba(251, 251, 255, 0.50);
+}
+
+.secondary-menu .title {
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+    display: flex;
+    align-items: center;
+
+    height: 80px;
+    padding: 0 20px;
+}
+
+.secondary-menu .item {
+    font-weight: 500;
+    
+    display: flex;
+    align-items: center;
+
+    height: 40px;
+    padding: 0 20px;
+
+    cursor: pointer;
+}
+
+.secondary-menu .item.active {
+    background: #061e29;
+}
+
+.secondary-menu .item:hover {
+    background: #061e29;
+}
+
+.secondary-menu .item .name {
+    flex: 1 1 auto;
+    color: rgba(251, 251, 255, 0.70);
+}
