@@ -43,7 +43,7 @@ header .search-results {
 }
 
 header .category {
-    color: #888;
+    color: #0B4F6C;
     font-weight: 500;
     font-size: 14px;
 }
@@ -52,6 +52,12 @@ header .result {
     color: #666;
     padding: 6px 10px;
     cursor: pointer;
+}
+
+header .result.active {
+    color: #666;
+    font-weight: 500;
+    background: #eee;
 }
 
 header .result:hover {

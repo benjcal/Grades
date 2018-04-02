@@ -8,7 +8,11 @@ class Header extends Component {
 
 
         this.state = {
-            value: ''
+            value: '',
+            courses: [],
+            students: [],
+            activities: [],
+            selected: 0
         }
 
         this.search = this.search.bind(this)
@@ -17,6 +21,28 @@ class Header extends Component {
     
     search(e) {
         this.setState({value: e.target.value})
+        
+        // eslint-disable-next-line
+        let courses = store.courses.values().filter(n => {
+            if (n.name.toLowerCase().toLowerCase().includes(this.state.value)) {
+                return n
+            }
+        })
+        // eslint-disable-next-line
+        let students = store.students.values().filter(n => {
+            if (n.first.toLowerCase().includes(this.state.value) | n.last.toLowerCase().includes(this.state.value)) {
+                return n
+            }
+        })
+        // eslint-disable-next-line
+        let activities = store.students.values().filter(n => {
+            if (n.first.toLowerCase().includes(this.state.value) | n.last.toLowerCase().includes(this.state.value)) {
+                return n
+            }
+        })
+
+        this.setState({courses, students, activities})
+
     }
 
     select(id, category) {
@@ -27,26 +53,7 @@ class Header extends Component {
     }
 
     render() {
-        // eslint-disable-next-line
-        let courses = store.courses.values().filter(n => {
-            if (n.name.toLowerCase().toLowerCase().includes(this.state.value)) {
-                return n
-            }
-        })
-
-        // eslint-disable-next-line
-        let students = store.students.values().filter(n => {
-            if (n.first.toLowerCase().includes(this.state.value) | n.last.toLowerCase().includes(this.state.value)) {
-                return n
-            }
-        })
-
-        // eslint-disable-next-line
-        let activities = store.students.values().filter(n => {
-            if (n.first.toLowerCase().includes(this.state.value) | n.last.toLowerCase().includes(this.state.value)) {
-                return n
-            }
-        })
+        let { courses, students, activities } = this.state
 
         return (
             <header>
@@ -61,7 +68,8 @@ class Header extends Component {
                             />
                     </div>
                     {this.state.value.length > 0 &&
-                        <div className="search-results">
+                        <div
+                            className="search-results">
 
                             {courses.length > 0 && <div className="category">COURSES:</div>}
                             {courses.map(j => 
