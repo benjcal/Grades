@@ -1,24 +1,33 @@
 .left-menu {
-    background: cadetblue;
-    width: 180px;
+    background: #0B4F6C;
+    color: rgba(251, 251, 255, 0.69);
+    user-select: none;
+    height: 100%;
+}
+
+.left-menu .logo {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-menu .logo img {
+    width: 100px;
 }
 
 .left-menu .item {
     padding: 20px;
+    cursor: pointer;
 }
-
+.left-menu .item i {
+    padding-right: 10px;
+}
+.left-menu .item.active {
+    padding: 20px 17px;
+    background: #09384C;
+    border-left: 3px solid #01BAEF;
+}
 .left-menu .item:hover {
-    background: #63d4d8;
-}
-
-.left-menu .subitem {
-    padding: 16px 26px;
-    background: #4b6d6e;
-}
-
-.left-menu .item-desc {
-    padding: 4px 24px;
-    background: #222424;
-    color: #FFF;
-    font-size: 14px;
+    background: #09384C;
 }

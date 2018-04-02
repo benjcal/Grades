@@ -1,7 +1,7 @@
 import React from 'react'
 import 'jdenticon'
 import { observer, inject } from 'mobx-react'
-import StudentRow from 'components/views/StudentsList/StudentRow'
+import StudentRow from './/StudentRow'
 
 const StudentsList = (props) => {
     // let { store } = props

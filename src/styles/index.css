@@ -1,4 +1,8 @@
+html {
+    height: 100%;
+}
 body {
     margin: 0;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    height: 100%;
 }

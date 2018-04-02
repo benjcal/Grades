@@ -2,11 +2,12 @@
 @import "_left-menu.css";
 @import "_table.css";
 
-main {
-    display: grid;
-    grid-template-columns: auto 1fr;
-}
 
-input {
-    width: 120px;
+#root {
+    height: 100%;
+}
+.app {
+    display: grid;
+    grid-template-columns: 200px auto;
+    height: 100%;
 }
