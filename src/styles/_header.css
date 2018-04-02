@@ -34,12 +34,12 @@ header .search-input input:focus {
 
 header .search-results {
     background: #FBFBFF;
-    border-radius: 20px;
+    border-radius: 6px;
     padding: 20px;
     width: 600px;
     position: absolute;
     margin-left: 40px;
-    box-shadow: 0 0 20px #cecece;
+    box-shadow: 0 0 10px #333;
 }
 
 header .category {

@@ -9,12 +9,12 @@ const SecondaryMenu = () => {
 
             <div className="item active">
                 <div className="name">Students</div>
-                <div className="total">22</div>
+                <div className="total">{store.enrolledStudents(store.currentCourse).length}</div>
             </div>
 
             <div className="item">
                 <div className="name">Activities</div>
-                <div className="total">12</div>
+                <div className="total">{store.listActivities(store.currentCourse).length}</div>
             </div>
         </div>
     )

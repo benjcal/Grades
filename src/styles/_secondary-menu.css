@@ -30,6 +30,8 @@
 
 .secondary-menu .item.active {
     background: #061e29;
+    padding-left: 17px;
+    border-left: 3px solid #01BAEF;
 }
 
 .secondary-menu .item:hover {

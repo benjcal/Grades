@@ -1,18 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react'
 import store from 'store/store'
 import { observer } from 'mobx-react'
 
 const CourseStudents = (props) => {
     return (
         <div className="course-students">
+            <div className="head">
+                <span className="id">ID</span>
+                <span className="name">NAME</span>
+            </div>
             {store.enrolledStudents(store.currentCourse).map(n => 
-                <div className="student" key={n.id}>
-                    <div className="id">{n.id}</div>
-                    <div className="name">{n.first} {n.last}</div>
-                </div>
+                <CourseStudentRow student={n} />
             )}
         </div>
     )
 }
 
 export default observer(CourseStudents)
+
+class CourseStudentRow extends Component {
+    render() {
+        let {student} = this.props
+        return (
+            <div className="student" key={student.id}>
+                <div className="id">{student.id}</div>
+                <div className="name">{student.first} {student.last}</div>
+            </div>
+        )
+    }
+}
