@@ -1,10 +1,11 @@
 import React from 'react'
 import 'jdenticon'
-import { observer, inject } from 'mobx-react'
+import { observer} from 'mobx-react'
+import store from 'store/store'
 import StudentRow from './/StudentRow'
 
 const StudentsList = (props) => {
-    // let { store } = props
+
     return (
         <div className="students-list">
             <div className="view-header" style={{display: 'flex', background: '#4c3652', color: '#FFF'}}>
@@ -23,7 +24,7 @@ const StudentsList = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.store.students.entries().map(n => {
+                    {store.students.entries().map(n => {
                         return <StudentRow student={n[1]} key={n[0]} />
                     }
                     )}
@@ -33,4 +34,4 @@ const StudentsList = (props) => {
     )
 }
 
-export default inject('store')(observer(StudentsList))
+export default observer(StudentsList)

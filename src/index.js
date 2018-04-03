@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 import App from 'components/App'
 import 'styles/index.css'
 import { Provider } from 'mobx-react'
@@ -28,7 +29,7 @@ activitiesSample.forEach(n => {
 
 
 ReactDOM.render(
-    <Provider store={store} >
+    <BrowserRouter>
         <App />
-    </Provider>,
+    </BrowserRouter>,
     document.getElementById('root'))

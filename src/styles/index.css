@@ -6,3 +6,6 @@ body {
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     height: 100%;
 }
+a {
+    color: inherit;
+}

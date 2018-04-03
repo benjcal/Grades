@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 import Header from 'components/misc/Header'
 import Students from 'components/views/Students/StudentsList'
 import Courses from 'components/views/Courses/CoursesList'
@@ -20,6 +21,13 @@ const App = () =>
         {store.currentView === 'course' + store.currentCourse && <CoursesSubMenu />}
         {store.currentView === 'course' + store.currentCourse + 'activity' && <CoursesSubMenu />}
         <main>
+            <Switch>
+                <Route path="/courses" component={Courses}/>
+                <Route path="/students" component={Students}/>
+                {/* <Route path="/courses" component={Courses}/> */}
+
+            </Switch>
+
             <Header />
             {store.currentView === 'home' && null}
             {store.currentView === 'courses' && <Courses />}

@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { observer, inject } from 'mobx-react'
+import { observer } from 'mobx-react'
 import 'jdenticon'
 import Delete from 'react-icons/lib/md/delete-forever'
 import Ok from 'react-icons/lib/md/check'
 import Clear from 'react-icons/lib/md/clear'
+import store from 'store/store'
 
 class StudentRow extends Component {
     constructor(props) {
@@ -81,4 +82,4 @@ class StudentRow extends Component {
     }
 }
 
-export default inject('store')(observer(StudentRow))
+export default observer(StudentRow)

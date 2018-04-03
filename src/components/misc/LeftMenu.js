@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import HomeIcon from 'react-icons/lib/md/home'
 import ActivitiesIcon from 'react-icons/lib/md/library-books'
 import GradesIcon from 'react-icons/lib/md/assignment-turned-in'
@@ -12,23 +13,17 @@ import store from 'store/store'
 const LeftMenu = () => {
     return (
         <nav className='left-menu'>
-            <div
-                className={['item', store.currentView === 'home' ? 'active' : null].join(' ')}
-                onClick={() => {store.setView('home')}}>
+            {/* <NavLink to="/" className="item" activeClassName="active">
                 <i><HomeIcon /></i>
-            </div>
+            </NavLink> */}
 
-            <div
-                className={['item', store.currentView === 'courses' ? 'active' : null].join(' ')}
-                onClick={() => {store.setView('courses')}}>
+            <NavLink to="/courses" className="item" activeClassName='active'>
                 <i><CoursesIcon /></i>
-            </div>
+            </NavLink>
 
-            <div
-                className={['item', store.currentView === 'students' ? 'active' : null].join(' ')}
-                onClick={() => {store.setView('students')}}>
+            <NavLink to="/students" className="item" activeClassName="active">
                 <i><StudentsIcon /></i>
-            </div>
+            </NavLink>
 
             <div
                 className={['item', store.currentView === 'activities' ? 'active' : null].join(' ')}
