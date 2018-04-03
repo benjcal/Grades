@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import store from 'store/store'
 import { observer } from 'mobx-react'
-import CoursesSubMenu from './CoursesSubMenu'
+import CourseSubMenu from './CourseSubMenu'
 
 const CourseStudents = ({match}) => {
     let { path, params } = match
     let { id } = params
     return (
         <div className="course-container">
-            <CoursesSubMenu id={id} localtion={path}/>
+            <CourseSubMenu id={id} localtion={path}/>
             <div className="course-students">
                 <div className="head">
                     <span className="id">ID</span>

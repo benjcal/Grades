@@ -3,7 +3,7 @@ import store from 'store/store'
 import { observer } from 'mobx-react'
 import { NavLink, withRouter } from 'react-router-dom'
 
-const SecondaryMenu = ({ id }) => {
+const CourseSubMenu = ({ id }) => {
     return (
         <div className="courses-sub-menu">
             <div className="title">{store.courses.get(id).name}</div>
@@ -31,5 +31,4 @@ const SecondaryMenu = ({ id }) => {
     )
 }
 
-export default observer(SecondaryMenu)
-// export default withRouter(observer(SecondaryMenu))
+export default observer(CourseSubMenu)
