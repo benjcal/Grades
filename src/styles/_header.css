@@ -3,6 +3,11 @@ header {
     align-items: center;
     background: #FBFBFF;
     height: 80px;
+
+    /* position: absolute;
+    width: 800px; */
+
+    /* box-shadow: 0 0 10px #333; */
 }
 
 

@@ -1,3 +1,7 @@
+.course-students {
+    flex: 1 1 auto;
+}
+
 .course-students .head {
     font-weight: 500;
     color: rgba(251,251,255,0.50);

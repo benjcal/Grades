@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import store from 'store/store'
+import CoursesSubMenu from './CoursesSubMenu'
 
-class CourseActivities extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            course: 2
-        }
-    }
-
-    render() {
-        return (
+const CourseActivities = ({ match }) => {
+    let { path, params } = match
+    let { id } = params
+    return (
+        <div className="course-container">
+            <CoursesSubMenu id={id} localtion={path}/>
             <div className="course-activities">
                 <div className="head">
                     <span className="id">ID</span>
@@ -28,8 +24,9 @@ class CourseActivities extends Component {
                     </div>
                 )}
             </div>
-        )
-    }
+        </div>
+        
+    )
 }
 
 export default observer(CourseActivities)

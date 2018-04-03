@@ -1,3 +1,7 @@
+.course-container {
+    display: flex;
+}
+
 .courses-sub-menu {
     background: #09384C;
     flex: 0 0 200px;

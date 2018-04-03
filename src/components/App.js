@@ -6,11 +6,9 @@ import Courses from 'components/views/Courses/CoursesList'
 // import Activities from 'components/views/Activities/ActivitiesList'
 import Grades from './views/Grades/GradesList'
 import LeftMenu from 'components/misc/LeftMenu'
-import CoursesSubMenu from 'components/misc/CoursesSubMenu'
 import CourseStudents from 'components/views/Courses/CourseStudents'
 import CourseActivities from 'components/views/Courses/CourseActivities'
-import store from 'store/store'
-import { observer } from 'mobx-react'
+
 
 import DevTools from 'mobx-react-devtools'
 import 'styles/app.css'
@@ -18,27 +16,22 @@ import 'styles/app.css'
 const App = () =>    
     <div className="app">
         <LeftMenu />
-        {store.currentView === 'course' + store.currentCourse && <CoursesSubMenu />}
-        {store.currentView === 'course' + store.currentCourse + 'activity' && <CoursesSubMenu />}
         <main>
-            <Switch>
-                <Route path="/courses" component={Courses}/>
-                <Route path="/students" component={Students}/>
-                {/* <Route path="/courses" component={Courses}/> */}
-
-            </Switch>
-
             <Header />
-            {store.currentView === 'home' && null}
-            {store.currentView === 'courses' && <Courses />}
-            {store.currentView === 'students' && <Students />}
-            {/* {store.currentView === 'activity' && <Activities />} */}
-            {store.currentView === 'grades' && <Grades />}
-            {store.currentView === 'course' + store.currentCourse && <CourseStudents />}
-            {store.currentView === 'course' + store.currentCourse + 'activity' && <CourseActivities />}
+            <Switch>
+                <Route exact path="/" component={Courses}/>
+                
+                <Route path="/courses" component={Courses}/>
+                <Route exact path="/course/:id" component={CourseStudents}/>
+                <Route path="/course/:id/students" component={CourseStudents}/>
+                <Route path="/course/:id/activities" component={CourseActivities}/>
+                
+                <Route path="/students" component={Students}/>
+                <Route path="/grades" component={Grades}/>
+            </Switch>
         </main>
         <DevTools />
     </div>
 
     
-export default observer(App)
+export default App

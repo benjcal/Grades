@@ -13,9 +13,9 @@ import store from 'store/store'
 const LeftMenu = () => {
     return (
         <nav className='left-menu'>
-            {/* <NavLink to="/" className="item" activeClassName="active">
+            <NavLink exact to="/" className="item" activeClassName="active">
                 <i><HomeIcon /></i>
-            </NavLink> */}
+            </NavLink>
 
             <NavLink to="/courses" className="item" activeClassName='active'>
                 <i><CoursesIcon /></i>
@@ -31,11 +31,15 @@ const LeftMenu = () => {
                 <i><ActivitiesIcon /></i>
             </div>
 
-            <div
+            <NavLink to="/grades" className="item" activeClassName="active">
+                <i><GradesIcon /></i>
+            </NavLink>
+
+            {/* <div
                 className={['item', store.currentView === 'grades' ? 'active' : null].join(' ')}
                 onClick={() => {store.setView('grades')}}>
                 <i><GradesIcon /></i>
-            </div>
+            </div> */}
 
             <div
                 className={['item', store.currentView === 'settings' ? 'active' : null].join(' ')}
@@ -46,4 +50,4 @@ const LeftMenu = () => {
     )
 }
 
-export default observer(LeftMenu)
+export default LeftMenu
