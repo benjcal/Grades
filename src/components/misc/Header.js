@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import SearchIcon from 'react-icons/lib/md/search'
 import store from 'store/store'
+import { observable } from 'mobx'
+import { observer } from 'mobx-react'
 
 class Header extends Component {
     constructor(props) {
@@ -19,9 +21,12 @@ class Header extends Component {
         this.select = this.select.bind(this)
         this.arrowKeys = this.arrowKeys.bind(this)
     }
+    // TODO: move local state to mobx
+    value = observable('ss')
     
     search(e) {
-        this.setState({value: e.target.value})
+        this.value = e.target.value
+        // this.setState({value: e.target.value})
         this.setState({selected: 0})
         
         // eslint-disable-next-line
@@ -91,14 +96,14 @@ class Header extends Component {
                         <input
                             type='text'
                             placeholder='Search for a course, student or assignment'
-                            value={this.state.value}
+                            value={this.value}
                             onChange={this.search}
                             onBlur={() => {this.setState({value: ''})}}
                             onKeyDown={this.arrowKeys}
                             ref={(e) => {this.searchElement = e}}
                             />
                     </div>
-                    {this.state.value.length > 0 &&
+                    {this.value.length > 0 &&
                         <div
                             className="search-results">
 
@@ -141,4 +146,4 @@ class Header extends Component {
     }
 }
 
-export default Header
+export default observer(Header)
