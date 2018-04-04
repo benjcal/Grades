@@ -3,30 +3,17 @@ import store from 'store/store'
 import { observer } from 'mobx-react'
 import { NavLink, withRouter } from 'react-router-dom'
 
-const StudentsSubMenu = ({ id }) => {
+const StudentsSubMenu = () => {
     return (
         <div className="courses-sub-menu">
-            <div className="title">{store.courses.get(id).name}</div>
+            <div className="title">STUDENTS</div>
 
             <NavLink
-                to={`/course/${id}/students`}
+                to={`/students/add`}
                 activeClassName="active"
                 className="item">
-                <div className="name">Students</div>
-                <div className="total">{store.students.byCourse(id).length}</div>
+                <div className="name">Add Students</div>
             </NavLink>
-
-            <div className="subitem">ENROLL STUDENTS</div>
-
-            <NavLink
-                to={`/course/${id}/activities`}
-                activeClassName="active"
-                className="item">
-                <div className="name">Activities</div>
-                <div className="total">{store.activities.byCourse(id).length}</div>
-            </NavLink>
-
-            <div className="subitem">ADD ACTIVITY</div>
         </div>
     )
 }

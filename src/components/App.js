@@ -5,7 +5,9 @@ import LeftMenu from 'components/misc/LeftMenu'
 import Home from 'components/views/Home'
 import CoursesList from 'components/views/Courses/CoursesList'
 import Course from 'components/views/Courses/Course'
+
 import Students from 'components/views/Students/StudentsList'
+import AddStudent from 'components/views/Students/AddStudent'
 
 import Activities from 'components/views/Activities/ActivitiesList'
 import Grades from './views/Grades/GradesList'
@@ -31,7 +33,9 @@ const App = () =>
                 <Route path="/course/:id/students" component={CourseStudents}/>
                 <Route path="/course/:id/activities" component={CourseActivities}/>
                 
-                <Route path="/students" component={Students}/>
+                <Route exact path="/students" component={Students}/>
+                <Route path="/students/add" component={AddStudent}/>
+
                 <Route path="/grades" component={Grades}/>
             </Switch>
         </main>

@@ -1,4 +1,9 @@
+.students-container {
+    display: flex;
+}
+
 .students-list {
+
     flex: 1 1 auto;
 }
 

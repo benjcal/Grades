@@ -2,11 +2,13 @@ import React from 'react'
 import { observer} from 'mobx-react'
 import { observable } from 'mobx'
 import store from 'store/store'
+import StudentsSubMenu from './StudentsSubMenu'
 
 const StudentsList = (props) => {
 
     return (
         <div className="students-container">
+            <StudentsSubMenu />
             <div className="students-list">
                 <div className="head">
                     <span className="id">ID</span>
