@@ -40,55 +40,56 @@ const StudentRow = observer(({ student }) => {
         editing: observable(false)
     }
 
-    const change = (e) => {
+    const change = (e, id) => {
         switch (e.target.parentElement.className) {
             case 'first':
                 state.student.first = e.target.value
-                stateView.editing.set('first')
+                stateView.editing.set('first' + id)
                 break
             case 'last':
                 state.student.last = e.target.value
-                stateView.editing.set('last')
+                stateView.editing.set('last' + id)
                 break
             case 'email':
                 state.student.email = e.target.value
-                stateView.editing.set('email')
+                stateView.editing.set('email' + id)
                 break
             case 'phone':
                 state.student.phone = e.target.value
-                stateView.editing.set('phone')
+                stateView.editing.set('phone' + id)
         }
     }
     const save = () => {
-        store.students.update(state.student)
+        // store.students.update(state.student)
         stateView.editing.set('')
     }
     const cancel = () => {
-        console.log(student)
-        state.student = originalStudent
+        // console.log(student)
+        // state.student = originalStudent
+        stateView.editing.set('')
     }
     return (
         <div className="student">
             <div className="id">{student.id}</div>
             {/* <div className="first">{state.student.first}</div> */}
             <div className="first">
-                <input type="text" value={state.student.first} onChange={change} tabIndex={student.id}/>
-                {stateView.editing.get() === 'first' && <span>
+                <input type="text" value={state.student.first} onChange={(e, id) => change(e, student.id)} tabIndex={student.id}/>
+                {stateView.editing.get() === 'first' + student.id && <span>
                     {/* <div className="action" onClick={save}>save</div> */}
                     <div className="action" onClick={cancel}>cancel</div>
                 </span> }
             </div>
             <div className="last">
-                <input type="text" value={state.student.last} onChange={change}/>
-                {stateView.editing.get() === 'last' && <div className="action" onClick={() => {}}>save</div>}
+                <input type="text" value={state.student.last} onChange={(e, id) => change(e, student.id)}/>
+                {stateView.editing.get() === 'last' + student.id && <div className="action" onClick={save}>save</div>}
             </div>
             <div className="email">
-                <input type="text" value={state.student.email} onChange={change}/>
-                {stateView.editing.get() === 'email' && <div className="action" onClick={save}>save</div>}
+                <input type="text" value={state.student.email} onChange={(e, id) => change(e, student.id)}/>
+                {stateView.editing.get() === 'email' + student.id && <div className="action" onClick={save}>save</div>}
             </div>
             <div className="phone">
-                <input type="text" value={state.student.phone} onChange={change}/>
-                {stateView.editing.get() === 'phone' && <div className="action" onClick={save}>save</div>}
+                <input type="text" value={state.student.phone} onChange={(e, id) => change(e, student.id)}/>
+                {stateView.editing.get() === 'phone' + student.id && <div className="action" onClick={save}>save</div>}
             </div>
         </div>
     )
