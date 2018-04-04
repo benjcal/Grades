@@ -3,20 +3,20 @@ import store from 'store/store'
 import { observer } from 'mobx-react'
 import CourseSubMenu from './CourseSubMenu'
 
-const CourseStudents = ({match}) => {
-    let { path, params } = match
-    let { id } = params
+const CourseStudents = ({ match }) => {
+    let { id } = match.params
+    id = parseInt(id, 10)
     return (
         <div className="course-container">
-            <CourseSubMenu id={id} localtion={path}/>
+            <CourseSubMenu id={id}/>
             <div className="course-students">
                 <div className="head">
                     <span className="id">ID</span>
                     <span className="name">NAME</span>
                 </div>
-                {store.enrolledStudents(id).map(n => 
-                    <CourseStudentRow student={n} key={n.id}/>
-                )}
+                {store.students.byCourse(id).map(n => {
+                    return <CourseStudentRow student={n} key={n.id}/>
+                })}
             </div>
         </div>
     )
@@ -24,14 +24,8 @@ const CourseStudents = ({match}) => {
 
 export default observer(CourseStudents)
 
-class CourseStudentRow extends Component {
-    render() {
-        let {student} = this.props
-        return (
-            <div className="student">
-                <div className="id">{student.id}</div>
-                <div className="name">{student.first} {student.last}</div>
-            </div>
-        )
-    }
-}
+const CourseStudentRow = ({ student }) => 
+    <div className="student">
+        <div className="id">{student.id}</div>
+        <div className="name">{student.first} {student.last}</div>
+    </div>

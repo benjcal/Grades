@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import SearchIcon from 'react-icons/lib/md/search'
-import store from 'store/store'
 import { observer } from 'mobx-react'
+import { withRouter } from 'react-router-dom'
+import store from 'store/store'
 
 class Header extends Component {
     constructor(props) {
@@ -26,21 +27,15 @@ class Header extends Component {
         
         // eslint-disable-next-line
         let courses = store.courses.values().filter(n => {
-            if (n.name.toLowerCase().includes(e.target.value)) {
-                return n
-            }
+            if (n.name.toLowerCase().includes(e.target.value)) { return n }
         })
         // eslint-disable-next-line
         let students = store.students.values().filter(n => {
-            if (n.first.toLowerCase().includes(e.target.value) | n.last.toLowerCase().includes(e.target.value)) {
-                return n
-            }
+            if (n.first.toLowerCase().includes(e.target.value) | n.last.toLowerCase().includes(e.target.value)) { return n }
         })
         // eslint-disable-next-line
         let activities = store.activities.values().filter(n => {
-            if (n.name.toLowerCase().includes(e.target.value)) {
-                return n
-            }
+            if (n.name.toLowerCase().includes(e.target.value)) { return n }
         })
 
         this.setState({courses, students, activities})
@@ -48,14 +43,15 @@ class Header extends Component {
 
     select(id, category) {
         if (category === 'course') {
-            store.selectCourse(id)
+            this.props.history.push(`/course/${id}`)
         }
         if (category === 'student') {
-            console.log('student!', id)
+            this.props.history.push(`/student/${id}`)
         }
         if (category === 'activity') {
-            store.setView('course' + store.currentCourse + 'activity')
+            this.props.history.push(`/activity/${id}`)
         }
+
         this.setState({value: ''})
     }
 
@@ -71,18 +67,16 @@ class Header extends Component {
                 this.select(this.state.courses[this.state.selected].id, 'course')
             }
             if (this.state.selected > this.state.courses.length && this.state.selected < this.state.courses.length + this.state.students.length) {
-                this.select(this.state.students[this.state.selected - this.state.courses.length], 'student')
+                this.select(this.state.students[this.state.selected - this.state.courses.length].id, 'student')
             }
             if (this.state.selected > this.state.courses.length + this.state.students.length) {
-                this.select(this.state.students[this.state.selected - this.state.courses.length], 'activity')
+                this.select(this.state.activities[this.state.selected - this.state.courses.length].id, 'activity')
             }
-            
         }
     }
 
     render() {
-        let { courses, students, activities } = this.state
-
+        let { courses, students, activities, value, selected } = this.state
         return (
             <header>
                 <div className='search'>
@@ -91,21 +85,21 @@ class Header extends Component {
                         <input
                             type='text'
                             placeholder='Search for a course, student or assignment'
-                            value={this.value}
+                            value={value}
                             onChange={this.search}
                             onBlur={() => {this.setState({value: ''})}}
                             onKeyDown={this.arrowKeys}
                             ref={(e) => {this.searchElement = e}}
                             />
                     </div>
-                    {this.state.value.length > 0 &&
+                    {value.length > 0 &&
                         <div
                             className="search-results">
 
                             {courses.length > 0 && <div className="category">COURSES:</div>}
                             {courses.map((j, i) => 
                                 <div
-                                    className={["result", this.state.selected === i ? 'active' : null].join(' ')}
+                                    className={["result", selected === i ? 'active' : null].join(' ')}
                                     onClick={() => {this.select(j.id, 'course')}}
                                     key={j.id}>{j.name}</div>    
                             )
@@ -115,7 +109,7 @@ class Header extends Component {
                             {   // eslint-disable-next-line
                                 students.map((j, i) => 
                                 <div
-                                    className={["result", this.state.selected === i + courses.length ? 'active' : null].join(' ')}
+                                    className={["result", selected === i + courses.length ? 'active' : null].join(' ')}
                                     key={j.id}>{j.first} {j.last}</div>
                             )
                             }
@@ -124,7 +118,7 @@ class Header extends Component {
                             {   // eslint-disable-next-line
                                 activities.map((j, i) => 
                                 <div
-                                    className={["result", this.state.selected === i + courses.length + students.length? 'active' : null].join(' ')}
+                                    className={["result", selected === i + courses.length + students.length? 'active' : null].join(' ')}
                                     key={j.id}>{j.name} {j.id}</div>
                             )
                             }
@@ -141,4 +135,4 @@ class Header extends Component {
     }
 }
 
-export default observer(Header)
+export default withRouter(observer(Header))

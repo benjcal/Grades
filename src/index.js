@@ -12,19 +12,28 @@ import activitiesSample from 'store/data/activitiesSample.json'
 window.$store = store
 
 studentsSample.forEach(n => {
-    store.addStudent(n)
-    if (n.id < 7) {
-        store.enrollStudent(1, n.id)
-    }
+    store.students.add(n)
 })
 
 coursesSample.forEach(n => {
-    store.addCourse(n)
+    store.courses.add(n)
 })
 
 activitiesSample.forEach(n => {
-    store.addActivity(n)
+    store.activities.add(n)
 })
+
+studentsSample.forEach(n => {
+    store.courses.values().forEach(e => n.enroll(e.id))
+})
+
+studentsSample.forEach(n => {
+    store.activities.values().forEach(e => e.grade(n.id, Math.floor(Math.random() * 100)))
+})
+
+
+
+
 
 
 

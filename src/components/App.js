@@ -1,11 +1,15 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Header from 'components/misc/Header'
-import Students from 'components/views/Students/StudentsList'
-import Courses from 'components/views/Courses/CoursesList'
-// import Activities from 'components/views/Activities/ActivitiesList'
-import Grades from './views/Grades/GradesList'
 import LeftMenu from 'components/misc/LeftMenu'
+// import Header from 'components/misc/Header'
+import Home from 'components/views/Home'
+import CoursesList from 'components/views/Courses/CoursesList'
+import Course from 'components/views/Courses/Course'
+import Students from 'components/views/Students/StudentsList'
+
+import Activities from 'components/views/Activities/ActivitiesList'
+import Grades from './views/Grades/GradesList'
+
 import CourseStudents from 'components/views/Courses/CourseStudents'
 import CourseActivities from 'components/views/Courses/CourseActivities'
 
@@ -17,12 +21,13 @@ const App = () =>
     <div className="app">
         <LeftMenu />
         <main>
-            <Header />
+            {/* <Header /> */}
             <Switch>
-                <Route exact path="/" component={Courses}/>
+                <Route exact path="/" component={Home}/>
                 
-                <Route path="/courses" component={Courses}/>
-                <Route exact path="/course/:id" component={CourseStudents}/>
+                {/* Courses */}
+                <Route path="/courses" component={CoursesList}/>
+                <Route exact path="/course/:id" component={Course}/>
                 <Route path="/course/:id/students" component={CourseStudents}/>
                 <Route path="/course/:id/activities" component={CourseActivities}/>
                 

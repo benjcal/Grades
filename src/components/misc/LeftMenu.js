@@ -6,9 +6,6 @@ import GradesIcon from 'react-icons/lib/md/assignment-turned-in'
 import CoursesIcon from 'react-icons/lib/md/class'
 import StudentsIcon from 'react-icons/lib/md/people'
 import SettingsIcon from 'react-icons/lib/md/settings'
-import { observer } from 'mobx-react'
-
-import store from 'store/store'
 
 const LeftMenu = () => {
     return (
@@ -25,27 +22,17 @@ const LeftMenu = () => {
                 <i><StudentsIcon /></i>
             </NavLink>
 
-            <div
-                className={['item', store.currentView === 'activities' ? 'active' : null].join(' ')}
-                onClick={() => {store.setView('activities')}}>
+            <NavLink to="/activities" className="item" activeClassName="active">
                 <i><ActivitiesIcon /></i>
-            </div>
+            </NavLink>
 
             <NavLink to="/grades" className="item" activeClassName="active">
                 <i><GradesIcon /></i>
             </NavLink>
 
-            {/* <div
-                className={['item', store.currentView === 'grades' ? 'active' : null].join(' ')}
-                onClick={() => {store.setView('grades')}}>
-                <i><GradesIcon /></i>
-            </div> */}
-
-            <div
-                className={['item', store.currentView === 'settings' ? 'active' : null].join(' ')}
-                onClick={() => {store.setView('settings')}}>
+            <NavLink to="/settings" className="item" activeClassName="active">
                 <i><SettingsIcon /></i>
-            </div>
+            </NavLink>
         </nav>
     )
 }

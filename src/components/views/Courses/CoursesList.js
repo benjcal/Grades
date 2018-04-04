@@ -6,12 +6,13 @@ import { observer } from 'mobx-react'
 const CoursesList = (props) => {
     return (
         <div className="courses-list">
-            {store.courses.values().map(n => 
+            {store.courses.values().map(c => 
                 <Link
-                    to={`course/${n.id}`}
-                    className="course" key={n.id}>
-                    <div className="name">{n.name}</div>
-                    <div className="count">{store.enrolledStudents(n.id).length} Students</div>
+                    to={`/course/${c.id}`}
+                    className="course" key={c.id}>
+                    <div className="name">{c.name}</div>
+                    <div className="count">{store.students.byCourse(c.id).length} Students</div>
+                    <div className="count">{store.activities.byCourse(c.id).length} Activities</div>
                 </Link>
             )}
         </div>
