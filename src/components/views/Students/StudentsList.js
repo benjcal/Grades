@@ -1,37 +1,93 @@
 import React from 'react'
-import 'jdenticon'
 import { observer} from 'mobx-react'
+import { observable } from 'mobx'
 import store from 'store/store'
-import StudentRow from './/StudentRow'
 
 const StudentsList = (props) => {
 
     return (
-        <div className="students-list">
-            <div className="view-header" style={{display: 'flex', background: '#4c3652', color: '#FFF'}}>
-                <h1>Students List</h1>
+        <div className="students-container">
+            <div className="students-list">
+                <div className="head">
+                    <span className="id">ID</span>
+                    <span className="first">FIRST</span>
+                    <span className="last">LAST</span>
+                    <span className="email">EMAIL</span>
+                    <span className="phone">PHONE</span>
+                </div>
+                {store.students.values().map(n => {
+                    return <StudentRow student={n} key={n.id}/>
+                })}
+
             </div>
-            <table className="table table-hover">
-                <thead className="thead-light">
-                    <tr>
-                        <th scope="col" width="18">ID</th>
-                        <th scope="col" width="42"></th>
-                        <th scope="col" width="180">First</th>
-                        <th scope="col" width="100">Last</th>
-                        <th scope="col" width="160">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col" width="10">Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {store.students.entries().map(n => {
-                        return <StudentRow student={n[1]} key={n[0]} />
-                    }
-                    )}
-                </tbody>
-            </table>
         </div>
     )
 }
 
 export default observer(StudentsList)
+
+let stateView = {
+    editing: observable('')
+}
+
+
+const StudentRow = observer(({ student }) => {
+    let originalStudent = student
+    let state = {
+        student: observable(student),
+        editing: observable(false)
+    }
+
+    const change = (e) => {
+        switch (e.target.parentElement.className) {
+            case 'first':
+                state.student.first = e.target.value
+                stateView.editing.set('first')
+                break
+            case 'last':
+                state.student.last = e.target.value
+                stateView.editing.set('last')
+                break
+            case 'email':
+                state.student.email = e.target.value
+                stateView.editing.set('email')
+                break
+            case 'phone':
+                state.student.phone = e.target.value
+                stateView.editing.set('phone')
+        }
+    }
+    const save = () => {
+        store.students.update(state.student)
+        stateView.editing.set('')
+    }
+    const cancel = () => {
+        console.log(student)
+        state.student = originalStudent
+    }
+    return (
+        <div className="student">
+            <div className="id">{student.id}</div>
+            {/* <div className="first">{state.student.first}</div> */}
+            <div className="first">
+                <input type="text" value={state.student.first} onChange={change} tabIndex={student.id}/>
+                {stateView.editing.get() === 'first' && <span>
+                    {/* <div className="action" onClick={save}>save</div> */}
+                    <div className="action" onClick={cancel}>cancel</div>
+                </span> }
+            </div>
+            <div className="last">
+                <input type="text" value={state.student.last} onChange={change}/>
+                {stateView.editing.get() === 'last' && <div className="action" onClick={() => {}}>save</div>}
+            </div>
+            <div className="email">
+                <input type="text" value={state.student.email} onChange={change}/>
+                {stateView.editing.get() === 'email' && <div className="action" onClick={save}>save</div>}
+            </div>
+            <div className="phone">
+                <input type="text" value={state.student.phone} onChange={change}/>
+                {stateView.editing.get() === 'phone' && <div className="action" onClick={save}>save</div>}
+            </div>
+        </div>
+    )
+})

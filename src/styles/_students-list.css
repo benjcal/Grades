@@ -1,0 +1,58 @@
+.students-list {
+    flex: 1 1 auto;
+}
+
+.students-list input {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.students-list .action {
+    background: #456;
+    padding: 6px;
+    border-radius: 2px;
+    color: #fff;
+    position: absolute;
+}
+
+.students-list .head {
+    font-weight: 500;
+    color: rgba(251,251,255,0.50);
+    background: linear-gradient(0deg, #515151 0%, #757575 100%);
+
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.students-list .id {
+    flex: 0 0 60px;
+    margin-left: 20px;
+}
+.students-list .first {
+    flex: 0 0 140px;
+}
+.students-list .last {
+    flex: 0 0 140px;
+}
+.students-list .email {
+    flex: 0 0 300px;
+}
+.students-list .phone {
+    flex: 1 1 auto;
+}
+
+.students-list .student {
+    display: flex;
+    padding: 16px 0;
+    font-size: 18px;
+    color: #757575;
+}
+
+.students-list .student:nth-child(even) {
+    background: #FBFBFF
+}
