@@ -1,14 +1,12 @@
 import { observable } from 'mobx'
-import students from './students'
-import courses from './courses'
-import activities from './activities'
-import grades from './grades'
+import students from './sections/students'
+import courses from './sections/courses'
+import activities from './sections/activities'
 
 const store = observable({
     students,
     courses,
-    activities,
-    grades,
+    activities
 })
 
 export default store

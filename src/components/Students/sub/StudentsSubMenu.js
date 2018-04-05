@@ -1,19 +1,23 @@
 import React from 'react'
-import store from 'store/store'
 import { observer } from 'mobx-react'
-import { NavLink, withRouter } from 'react-router-dom'
 
-const StudentsSubMenu = () => {
+const StudentsSubMenu = ({ callback }) => {
     return (
         <div className="courses-sub-menu">
             <div className="title">STUDENTS</div>
 
-            <NavLink
+            {/* <NavLink
                 to={`/students/add`}
                 activeClassName="active"
                 className="item">
                 <div className="name">Add Students</div>
-            </NavLink>
+            </NavLink> */}
+
+            <div
+                onClick={callback}
+                className="item">
+                <div className="name">Add Students</div>
+            </div>
         </div>
     )
 }

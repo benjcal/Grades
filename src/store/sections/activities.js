@@ -23,8 +23,6 @@ activities.byCourse = (c) => computed(() => {
     })
 }).get()
 
-
-
 activities.intercept(change => {
     if (change.type === 'add') {
         change.newValue.grades = observable.map({})
@@ -36,9 +34,13 @@ activities.intercept(change => {
         change.newValue.average = () => computed(()=> {
             let length = activities.get(change.name).grades.values().length 
             let total = activities.get(change.name).grades.values().reduce((a, g) => a + g)
-            let total_points = activities.get(change.name).total_points
+            let point = activities.get(change.name).points
 
-            return (total / length)
+            return ((total / length) / point) * 100
+        }).get()
+
+        change.newValue.studentGrade = (s) => computed(()=> {
+            return activities.get(change.name).grades.get(s)
         }).get()
     }
     

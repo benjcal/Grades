@@ -2,40 +2,32 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import App from 'components/App'
-import 'styles/index.css'
-import { Provider } from 'mobx-react'
 import store from 'store/store'
-import studentsSample from 'store/data/studentsSample.json'
-import coursesSample from 'store/data/coursesSample.json'
-import activitiesSample from 'store/data/activitiesSample.json'
+import studentsData from 'store/sample_data/students.json'
+import coursesData from 'store/sample_data/courses.json'
+import activitiesData from 'store/sample_data/activities.json'
 
 window.$store = store
 
-studentsSample.forEach(n => {
+studentsData.forEach(n => {
     store.students.add(n)
 })
 
-coursesSample.forEach(n => {
+coursesData.forEach(n => {
     store.courses.add(n)
 })
 
-activitiesSample.forEach(n => {
+activitiesData.forEach(n => {
     store.activities.add(n)
 })
 
-studentsSample.forEach(n => {
+studentsData.forEach(n => {
     store.courses.values().forEach(e => n.enroll(e.id))
 })
 
-studentsSample.forEach(n => {
+studentsData.forEach(n => {
     store.activities.values().forEach(e => e.grade(n.id, Math.floor(Math.random() * 100)))
 })
-
-
-
-
-
-
 
 ReactDOM.render(
     <BrowserRouter>

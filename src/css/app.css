@@ -1,4 +1,4 @@
-@import "_header.css";
+/* @import "_header.css";
 @import "_left-menu.css";
 @import "_courses-sub-menu.css";
 @import "_table.css";
@@ -6,7 +6,20 @@
 @import "_course-students.css";
 @import "_course-activities.css";
 @import "_students-list.css";
-@import "_add-student.css";
+@import "_add-student.css"; */
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    height: 100%;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
 
 #root {
     height: 100%;

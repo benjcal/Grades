@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import store from 'store/store'
 import { observer } from 'mobx-react'
 import CourseSubMenu from './CourseSubMenu'

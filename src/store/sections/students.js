@@ -34,6 +34,10 @@ students.intercept((change) => {
             // TODO: disable enrolling a student twice
             students.get(change.name).courses.remove(c)
         }
+
+        change.newValue.name = computed(()=> {
+            return students.get(change.name).first + ' ' + students.get(change.name).last
+        })
     }
     return change
 })

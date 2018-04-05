@@ -1,0 +1,59 @@
+.add-student-container {
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-student {
+    background: #ddd;
+    padding: 40px;
+    box-shadow: 0 0 10px #000;
+    height: fit-content;
+}
+
+.add-student .header {
+    font-size: 40px;
+    color: #555;
+}
+
+.add-student .body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+}
+.add-student label {
+    padding: 20px 0;
+    display: flex;
+    flex-flow: column;
+}
+
+.add-student .courses .list span {
+    background: brown;
+    padding: 6px 10px;
+    margin: 6px;
+    border-radius: 10px;
+}
+
+.add-student-container .courses-modal {
+    background: #ddd;
+    padding: 40px;
+    box-shadow: 0 0 10px #000;
+    height: fit-content;
+    position: absolute;
+}
+
+.add-student-container .courses-modal div {
+    display: flex;
+
+}
+.courses-modal div input {
+    flex: 0 0 20px;
+}
+
+.courses-modal div:first-child {
+    
+}

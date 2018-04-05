@@ -3,12 +3,16 @@ import { observer} from 'mobx-react'
 import { observable } from 'mobx'
 import store from 'store/store'
 import StudentsSubMenu from './StudentsSubMenu'
+import AddStudent from './AddStudent'
+
+let addStudentsVisible = observable(false)
 
 const StudentsList = (props) => {
-
     return (
         <div className="students-container">
-            <StudentsSubMenu />
+            
+            <StudentsSubMenu callback={() => {addStudentsVisible.set(true)}}/>
+            {addStudentsVisible.get() && <AddStudent cancel={() => {addStudentsVisible.set(false)}} />}
             <div className="students-list">
                 <div className="head">
                     <span className="id">ID</span>

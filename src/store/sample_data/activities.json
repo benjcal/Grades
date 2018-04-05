@@ -1,0 +1,351 @@
+[{
+  "id": 1,
+  "type": "assitance",
+  "name": "assitance 1",
+  "points": 98,
+  "course_id": 6,
+  "weight": 27
+}, {
+  "id": 2,
+  "type": "quiz",
+  "name": "quiz 2",
+  "points": 85,
+  "course_id": 3,
+  "weight": 29
+}, {
+  "id": 3,
+  "type": "participation",
+  "name": "participation 3",
+  "points": 97,
+  "course_id": 11,
+  "weight": 31
+}, {
+  "id": 4,
+  "type": "homework",
+  "name": "homework 4",
+  "points": 99,
+  "course_id": 1,
+  "weight": 33
+}, {
+  "id": 5,
+  "type": "assitance",
+  "name": "assitance 5",
+  "points": 100,
+  "course_id": 1,
+  "weight": 24
+}, {
+  "id": 6,
+  "type": "homework",
+  "name": "homework 6",
+  "points": 95,
+  "course_id": 17,
+  "weight": 28
+}, {
+  "id": 7,
+  "type": "exam",
+  "name": "exam 7",
+  "points": 81,
+  "course_id": 10,
+  "weight": 38
+}, {
+  "id": 8,
+  "type": "quiz",
+  "name": "quiz 8",
+  "points": 85,
+  "course_id": 9,
+  "weight": 33
+}, {
+  "id": 9,
+  "type": "assitance",
+  "name": "assitance 9",
+  "points": 81,
+  "course_id": 7,
+  "weight": 25
+}, {
+  "id": 10,
+  "type": "exam",
+  "name": "exam 10",
+  "points": 82,
+  "course_id": 15,
+  "weight": 37
+}, {
+  "id": 11,
+  "type": "participation",
+  "name": "participation 11",
+  "points": 84,
+  "course_id": 2,
+  "weight": 22
+}, {
+  "id": 12,
+  "type": "assitance",
+  "name": "assitance 12",
+  "points": 100,
+  "course_id": 10,
+  "weight": 30
+}, {
+  "id": 13,
+  "type": "homework",
+  "name": "homework 13",
+  "points": 88,
+  "course_id": 7,
+  "weight": 29
+}, {
+  "id": 14,
+  "type": "homework",
+  "name": "homework 14",
+  "points": 100,
+  "course_id": 5,
+  "weight": 40
+}, {
+  "id": 15,
+  "type": "quiz",
+  "name": "quiz 15",
+  "points": 90,
+  "course_id": 4,
+  "weight": 35
+}, {
+  "id": 16,
+  "type": "homework",
+  "name": "homework 16",
+  "points": 99,
+  "course_id": 5,
+  "weight": 20
+}, {
+  "id": 17,
+  "type": "assitance",
+  "name": "assitance 17",
+  "points": 97,
+  "course_id": 20,
+  "weight": 24
+}, {
+  "id": 18,
+  "type": "assitance",
+  "name": "assitance 18",
+  "points": 91,
+  "course_id": 7,
+  "weight": 33
+}, {
+  "id": 19,
+  "type": "assitance",
+  "name": "assitance 19",
+  "points": 84,
+  "course_id": 20,
+  "weight": 21
+}, {
+  "id": 20,
+  "type": "assitance",
+  "name": "assitance 20",
+  "points": 97,
+  "course_id": 16,
+  "weight": 20
+}, {
+  "id": 21,
+  "type": "exam",
+  "name": "exam 21",
+  "points": 94,
+  "course_id": 3,
+  "weight": 23
+}, {
+  "id": 22,
+  "type": "participation",
+  "name": "participation 22",
+  "points": 98,
+  "course_id": 6,
+  "weight": 25
+}, {
+  "id": 23,
+  "type": "quiz",
+  "name": "quiz 23",
+  "points": 98,
+  "course_id": 9,
+  "weight": 28
+}, {
+  "id": 24,
+  "type": "exam",
+  "name": "exam 24",
+  "points": 84,
+  "course_id": 16,
+  "weight": 20
+}, {
+  "id": 25,
+  "type": "assitance",
+  "name": "assitance 25",
+  "points": 81,
+  "course_id": 5,
+  "weight": 26
+}, {
+  "id": 26,
+  "type": "assitance",
+  "name": "assitance 26",
+  "points": 82,
+  "course_id": 5,
+  "weight": 24
+}, {
+  "id": 27,
+  "type": "homework",
+  "name": "homework 27",
+  "points": 88,
+  "course_id": 15,
+  "weight": 23
+}, {
+  "id": 28,
+  "type": "homework",
+  "name": "homework 28",
+  "points": 82,
+  "course_id": 15,
+  "weight": 37
+}, {
+  "id": 29,
+  "type": "participation",
+  "name": "participation 29",
+  "points": 95,
+  "course_id": 5,
+  "weight": 22
+}, {
+  "id": 30,
+  "type": "homework",
+  "name": "homework 30",
+  "points": 99,
+  "course_id": 20,
+  "weight": 39
+}, {
+  "id": 31,
+  "type": "homework",
+  "name": "homework 31",
+  "points": 93,
+  "course_id": 4,
+  "weight": 39
+}, {
+  "id": 32,
+  "type": "participation",
+  "name": "participation 32",
+  "points": 95,
+  "course_id": 12,
+  "weight": 38
+}, {
+  "id": 33,
+  "type": "quiz",
+  "name": "quiz 33",
+  "points": 94,
+  "course_id": 5,
+  "weight": 23
+}, {
+  "id": 34,
+  "type": "participation",
+  "name": "participation 34",
+  "points": 99,
+  "course_id": 18,
+  "weight": 40
+}, {
+  "id": 35,
+  "type": "assitance",
+  "name": "assitance 35",
+  "points": 81,
+  "course_id": 1,
+  "weight": 26
+}, {
+  "id": 36,
+  "type": "homework",
+  "name": "homework 36",
+  "points": 91,
+  "course_id": 2,
+  "weight": 24
+}, {
+  "id": 37,
+  "type": "assitance",
+  "name": "assitance 37",
+  "points": 86,
+  "course_id": 4,
+  "weight": 24
+}, {
+  "id": 38,
+  "type": "quiz",
+  "name": "quiz 38",
+  "points": 81,
+  "course_id": 4,
+  "weight": 37
+}, {
+  "id": 39,
+  "type": "homework",
+  "name": "homework 39",
+  "points": 81,
+  "course_id": 18,
+  "weight": 34
+}, {
+  "id": 40,
+  "type": "participation",
+  "name": "participation 40",
+  "points": 89,
+  "course_id": 13,
+  "weight": 36
+}, {
+  "id": 41,
+  "type": "homework",
+  "name": "homework 41",
+  "points": 82,
+  "course_id": 18,
+  "weight": 29
+}, {
+  "id": 42,
+  "type": "assitance",
+  "name": "assitance 42",
+  "points": 85,
+  "course_id": 2,
+  "weight": 32
+}, {
+  "id": 43,
+  "type": "exam",
+  "name": "exam 43",
+  "points": 88,
+  "course_id": 15,
+  "weight": 33
+}, {
+  "id": 44,
+  "type": "exam",
+  "name": "exam 44",
+  "points": 90,
+  "course_id": 9,
+  "weight": 32
+}, {
+  "id": 45,
+  "type": "quiz",
+  "name": "quiz 45",
+  "points": 82,
+  "course_id": 20,
+  "weight": 39
+}, {
+  "id": 46,
+  "type": "exam",
+  "name": "exam 46",
+  "points": 85,
+  "course_id": 12,
+  "weight": 36
+}, {
+  "id": 47,
+  "type": "quiz",
+  "name": "quiz 47",
+  "points": 95,
+  "course_id": 10,
+  "weight": 37
+}, {
+  "id": 48,
+  "type": "exam",
+  "name": "exam 48",
+  "points": 94,
+  "course_id": 6,
+  "weight": 29
+}, {
+  "id": 49,
+  "type": "participation",
+  "name": "participation 49",
+  "points": 84,
+  "course_id": 3,
+  "weight": 40
+}, {
+  "id": 50,
+  "type": "quiz",
+  "name": "quiz 50",
+  "points": 95,
+  "course_id": 6,
+  "weight": 33
+}]
