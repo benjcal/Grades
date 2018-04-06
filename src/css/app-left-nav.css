@@ -1,0 +1,43 @@
+.app-left-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #222;
+    width: 60px;
+}
+
+.app-left-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+    font-size: 28px;
+    height: 60px;
+    width: 57px;
+}
+
+.app-left-nav .home {
+    border-left: 3px solid red;
+}
+.app-left-nav .courses {
+    border-left: 3px solid aqua;
+}
+.app-left-nav .students {
+    border-left: 3px solid yellowgreen;
+}
+.app-left-nav .activities {
+    border-left: 3px solid orangered;
+}
+.app-left-nav .grades {
+    border-left: 3px solid palevioletred;
+}
+.app-left-nav .settings {
+    border-left: 3px solid yellow;
+}
+
+.app-left-nav a:hover {
+    background: #444;
+}
+.app-left-nav .active {
+    background: #444;
+}

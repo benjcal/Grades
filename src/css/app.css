@@ -8,27 +8,23 @@
 @import "_students-list.css";
 @import "_add-student.css"; */
 
-html, body {
+html, body, #root, .app {
     height: 100%;
-}
-body {
     margin: 0;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-    height: 100%;
 }
 a {
     color: inherit;
-    text-decoration: inherit;
 }
 
-#root {
-    height: 100%;
-}
-.app {
-    display: flex;
-    height: 100%;
+body {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 main {
-    flex: 1 1 auto;
+    display: flex;
+    height: calc(100% - 60px);
+}
+
+.main-container {
+    overflow: auto;
 }

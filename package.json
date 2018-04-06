@@ -5,6 +5,7 @@
   "homepage": ".",
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "chart.js": "^2.7.2",
     "jdenticon": "^2.0.0",
     "lodash": "^4.17.5",
     "lodash.assign": "^4.2.0",
@@ -16,6 +17,7 @@
     "mobx-react": "^4.4.2",
     "popper.js": "^1.14.0",
     "react": "^16.2.0",
+    "react-chartjs-2": "^2.7.0",
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
     "react-router-dom": "^4.2.2",

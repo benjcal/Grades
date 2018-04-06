@@ -36,7 +36,7 @@ activities.intercept(change => {
             let total = activities.get(change.name).grades.values().reduce((a, g) => a + g)
             let point = activities.get(change.name).points
 
-            return ((total / length) / point) * 100
+            return Math.round(((total / length) / point) * 100)
         }).get()
 
         change.newValue.studentGrade = (s) => computed(()=> {

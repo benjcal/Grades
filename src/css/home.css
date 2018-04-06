@@ -1,0 +1,39 @@
+.home-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 360px 360px;
+    grid-gap: 40px;
+    width: 100%;
+    padding: 40px;
+    background: #EEE;
+    overflow-y: auto;
+}
+
+.home-view .overview {
+    border-radius: 10px;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 0 0 10px #000;
+}
+
+.home-view .overview .name {
+    font-size: 22px;
+    font-weight: 500;
+    color: #888;
+}
+
+.home-view hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.home-view .list {
+    height: 260px;
+    overflow-y: auto;
+}
+
+.home-view .list a {
+    display: block;
+    text-decoration: none;
+}
