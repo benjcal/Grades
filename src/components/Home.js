@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import store from 'store/store'
-import 'css/home.css'
+import 'css/home/home.css'
 
 const Home = () => {
     let { students, courses, activities } = store

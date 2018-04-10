@@ -1,22 +1,8 @@
-/* @import "_header.css";
-@import "_left-menu.css";
-@import "_courses-sub-menu.css";
-@import "_table.css";
-@import "_courses-list.css";
-@import "_course-students.css";
-@import "_course-activities.css";
-@import "_students-list.css";
-@import "_add-student.css"; */
+/* Base16 Color */
+@import "base16-styles/css-variables/base16-default-light.css";
 
-html, body, #root, .app {
-    height: 100%;
-    margin: 0;
-}
-a {
-    color: inherit;
-}
-
-body {
+/* Font */
+.app {
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 

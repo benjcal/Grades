@@ -6,6 +6,7 @@ import store from 'store/store'
 import studentsData from 'store/sample_data/students.json'
 import coursesData from 'store/sample_data/courses.json'
 import activitiesData from 'store/sample_data/activities.json'
+import 'css/index.css'
 
 window.$store = store
 

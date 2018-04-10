@@ -1,5 +1,5 @@
 .app-header {
-    background: #333;
+    background: var(--base06);
     width: 100%;
     height: 60px;
     display: flex;
@@ -15,9 +15,9 @@
     padding: 0 20px;
 }
 .app-header .app-name {
-    color: #ddd;
+    color: var(--base01);
     font-size: 20px
 }
 .app-header .user-name {
-    color: #ddd;
+    color: var(--base03);
 }
