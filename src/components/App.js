@@ -4,7 +4,8 @@ import { Route, Switch } from 'react-router-dom'
 // import Header from 'components/misc/Header'
 // import Home from 'components/views/Home'
 // import CoursesList from 'components/views/Courses/CoursesList'
-import CourseDetails from 'components/Courses/CourseDetails'
+// import CourseDetails from 'components/Courses/CourseDetails'
+import Dashboard from 'components/Dashboard/Dashboard'
 
 // import Students from 'components/views/Students/StudentsList'
 // import AddStudent from 'components/views/Students/AddStudent'
@@ -20,7 +21,7 @@ import CourseDetails from 'components/Courses/CourseDetails'
 
 import AppHeader from './global/AppHeader'
 import AppLeftNav from './global/AppLeftNav'
-import Home from './Home'
+// import Home from './Home'
 import 'css/app.css'
 
 const App = () =>    
@@ -29,8 +30,8 @@ const App = () =>
         <main>
             <AppLeftNav />
             <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/course/:id" component={CourseDetails}/>
+                <Route exact path="/" component={Dashboard}/>
+                {/* <Route exact path="/course/:id" component={CourseDetails}/> */}
             </Switch>
         </main>
     

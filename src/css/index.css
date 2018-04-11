@@ -5,4 +5,5 @@ html, body, #root, .app {
 }
 a {
     color: inherit;
+    text-decoration: inherit;
 }
