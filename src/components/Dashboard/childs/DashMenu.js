@@ -6,10 +6,10 @@ const DashMenu = (props) =>  (
             <span>Course Menu</span>
         </div>
         <div className="dash-menu__item">
-            <a href="#">Add Course</a>
+            <a>Add Course</a>
         </div>
         <div className="dash-menu__item">
-            <a href="#">Add Course</a>
+            <a>Add Course</a>
         </div>
     </div>
 )

@@ -86,6 +86,7 @@
     grid-gap: 40px;
     padding: 40px;
     background: var(--base00);
+    overflow-x: auto;
 }
 
 
