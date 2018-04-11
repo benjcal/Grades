@@ -108,3 +108,35 @@
     font-size: 20px;
     color: var(--base04);
 }
+
+
+
+/* ---------------WIP--------------- */
+
+.dash-table {
+    height: 270px;
+    overflow: hidden;
+}
+
+.dash-table__head {
+    display: flex;
+    background: var(--base01);
+
+    font-weight: 500;
+    height: 20px;
+}
+.dash-table__body {
+    height: 230px;
+    overflow-x: auto;
+}
+
+.dash-table__row {
+    display: flex;
+}
+.dash-table__row:nth-child(even) {
+    background: var(--base01);
+}
+
+.dash-table__col {
+    flex: 1;
+}

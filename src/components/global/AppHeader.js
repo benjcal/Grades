@@ -8,7 +8,7 @@ const AppHeader = () => {
                 <div className="app-name"><b>Grades</b>App</div>
             </div>
             <div className="right">
-                <div className="user-name">Ban Cal</div>
+                <div className="user-name">Ben Cal</div>
             </div>
         </div>
     )
