@@ -58,6 +58,9 @@ export const Student = types
     }).views(self => ({
         get name() {
             return `${self.first} ${self.last}`
+        },
+        enrolled(c) {
+            return
         }
     }))
     .actions(self => ({
@@ -84,7 +87,8 @@ export const Students = types
             return self.students.get(id)
         },
         byCourse(c) {
-            console.log(self.students.forEach())
+            
+            self.students.forEach(s => console.log(s))
             // eslint-disable-next-line
             // return self.students.values().filter(s => {
             //     if (s.courses.includes(c)) {
