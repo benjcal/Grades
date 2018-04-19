@@ -23,11 +23,11 @@ activitiesData.forEach(n => {
 })
 
 studentsData.forEach(n => {
-    store.courses.values().forEach(e => n.enroll(e.id))
+    Array.from(store.courses).forEach(e => n.enroll(e.id))
 })
 
 studentsData.forEach(n => {
-    store.activities.values().forEach(e => e.grade(n.id, Math.floor(Math.random() * 100)))
+    Array.from(store.activities).forEach(e => e.grade(n.id, Math.floor(Math.random() * 100)))
 })
 
 ReactDOM.render(

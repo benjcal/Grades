@@ -31,7 +31,7 @@ const App = () =>
             <AppLeftNav />
             <Switch>
                 <Route exact path="/" component={Dashboard}/>
-                {/* <Route exact path="/course/:id" component={CourseDetails}/> */}
+                {/* <Route exact path="/course" component={CourseDetails}/> */}
             </Switch>
         </main>
     

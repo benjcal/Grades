@@ -1,4 +1,4 @@
-import activities from '../sections/activities'
+import activities from '../models/activities'
 import data from '../sample_data/activities.json'
 
 it('can import activities', () => {
@@ -12,8 +12,7 @@ it('can add activity', () => {
     activities.add(data[3])
     activities.add(data[4])
 
-    expect(activities.get(data[4].id)).toEqual(data[4])
-    expect(() => activities.add(data[4])).toThrow('activity already exists')
+    expect(activities.get(data[4].id).toJSON().id).toEqual(data[4].id)
 })
 
 it('can update activity', () => {
@@ -39,17 +38,19 @@ it('can delete activity', () => {
 //     "course_id": 3,
 //     "weight": 29
 // }
-
-it('can list activities by course', () => {
-    expect(activities.byCourse(data[1].course_id)[0].name).toEqual('quiz 2')
-})
+// TODO: To be moved to store test
+// it('can list activities by course', () => {
+//     console.log(activities.courseActivities(data[1].course))
+//     expect(activities.courseActivities(data[1].course)[0].name).toEqual('quiz 2')
+// })
 
 it('can grade activity', () => {
+    
     activities.get(data[1].id).grade(1, 100)
 
     expect(activities.get(data[1].id).studentGrade(1)).toEqual(100)
 })
 
 it('can return average', () => {
-    expect(activities.get(data[1].id).average()).toBeGreaterThan(0)
+    expect(activities.get(data[1].id).averagePercent).toBeGreaterThan(0)
 })

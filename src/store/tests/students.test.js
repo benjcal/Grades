@@ -1,4 +1,4 @@
-import students from '../sections/students'
+import students from '../models/students'
 import data from '../sample_data/students.json'
 
 it('can add student', () => {
@@ -29,16 +29,4 @@ it('can delete student', () => {
     students.delete(data[0].id)
 
     expect(students.get(data[0].id)).toBeUndefined()
-})
-
-it('can enroll student in a course', () => {
-    students.get(data[1].id).enroll(1)
-
-    expect(students.byCourse(1)[0].courses).toContain(1)
-})
-
-it('can unenroll student in a course', () => {
-    students.get(data[1].id).unenroll(1)
-
-    expect(students.get(data[1].id).courses).not.toContain(1)
 })

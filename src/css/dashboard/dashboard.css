@@ -31,22 +31,24 @@
 .dash-menu {
     background: var(--base05);
 }
-.dash-menu * {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    padding: 0 20px;
-}
 .dash-menu__header {
     font-size: 20px;
     font-weight: 700;
 
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
     color: var(--base04);
 }
 .dash-menu__item {
     font-size: 16px;
     font-weight: 500;
 
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
     color: var(--base03);
 }
 .dash-menu__item:hover {
