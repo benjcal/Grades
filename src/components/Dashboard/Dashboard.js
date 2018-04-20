@@ -2,8 +2,8 @@ import React from 'react'
 import DashMenu from './childs/DashMenu'
 import DashHeader from './childs/DashHeader'
 import DashWidgets from './childs/DashWidgets'
-import DashTable from './childs/DashTable'
 import DashGraphBar from './childs/DashGraphBar'
+import DashList from './childs/DashList'
 import 'css/dashboard/dashboard.css'
 
 let coursesDashMenuData = [
@@ -32,7 +32,7 @@ const Dashboard = (props) =>  (
         <DashMenu data={coursesDashMenuData}/>
         <DashHeader name="some name"/>
         <DashWidgets>
-            <DashTable />
+            <DashList />
             <DashGraphBar />
             
         </DashWidgets>
