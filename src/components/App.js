@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom'
 // import CoursesList from 'components/views/Courses/CoursesList'
 // import CourseDetails from 'components/Courses/CourseDetails'
 import Dashboard from 'components/Dashboard/Dashboard'
+import CourseAdd from 'components/Courses/CourseAdd'
 
 // import Students from 'components/views/Students/StudentsList'
 // import AddStudent from 'components/views/Students/AddStudent'
@@ -32,6 +33,7 @@ const App = () =>
             <Switch>
                 <Route exact path="/" component={Dashboard}/>
                 {/* <Route exact path="/course" component={CourseDetails}/> */}
+                <Route exact path="/course/add" component={CourseAdd}/>
             </Switch>
         </main>
     
